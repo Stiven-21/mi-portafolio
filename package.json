@@ -25,6 +25,7 @@
     "@tailwindcss/postcss": "^4",
     "@types/node": "22.14.1",
     "@types/react": "^19",
+    "eslint": "^9.25.0",
     "typescript": "^5"
   },
   "jest": {
