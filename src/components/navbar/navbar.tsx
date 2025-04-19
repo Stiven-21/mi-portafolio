@@ -20,7 +20,6 @@ export const Navbar = () => {
   const router = useRouter();
   const { t_navbar, t_common } = Translations();
 
-  // Cambiar color de fondo al hacer scroll
   useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 10);
@@ -85,30 +84,31 @@ export const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`border-b sticky top-0 z-30 transition-colors duration-300 ease-in-out ${
-        hasScrolled || sidebarOpen
-          ? "bg-slate-100/95 dark:bg-slate-900/95 backdrop-blur-sm border-b-slate-300 dark:border-b-neutral-800"
-          : "bg-transparent border-transparent"
-      }`}
-    >
-      <div className="container mx-auto py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <Link
-          href="/"
-          className="text-xl font-bold italic text-gray-900 dark:text-white"
-        >
-          {t_common("my_portfolio")}
-        </Link>
+    <>
+      <nav
+        className={`border-b sticky top-0 z-30 transition-colors duration-300 ease-in-out ${
+          hasScrolled || sidebarOpen
+            ? "bg-slate-100/95 dark:bg-slate-900/95 backdrop-blur-sm border-b-slate-300 dark:border-b-neutral-800"
+            : "bg-transparent border-transparent"
+        }`}
+      >
+        <div className="container mx-auto py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          <Link
+            href="/"
+            className="text-xl font-bold italic text-gray-900 dark:text-white"
+          >
+            {t_common("my_portfolio")}
+          </Link>
 
-        <div className="flex items-center space-x-2 md:space-x-4">
-          {/* Botones del navbar en pantallas grandes */}
-          <div className="hidden md:flex space-x-1">
-            {sections.map((section) => (
-              <Button
-                key={section.href}
-                asChild
-                variant="none"
-                className={`
+          <div className="flex items-center space-x-2 md:space-x-4">
+            {/* Botones del navbar en pantallas grandes */}
+            <div className="hidden md:flex space-x-1">
+              {sections.map((section) => (
+                <Button
+                  key={section.href}
+                  asChild
+                  variant="none"
+                  className={`
                   ${
                     (pathname === section.href && section.href !== "#") ||
                     (section.href.startsWith("#") &&
@@ -118,27 +118,28 @@ export const Navbar = () => {
                   }
                   px-3 py-2 text-sm font-medium
                 `}
-                onClick={() => handleNavigation(section.href)}
-              >
-                <Link href={section.href}>{t_navbar(section.label)}</Link>
-              </Button>
-            ))}
-          </div>
+                  onClick={() => handleNavigation(section.href)}
+                >
+                  <Link href={section.href}>{t_navbar(section.label)}</Link>
+                </Button>
+              ))}
+            </div>
 
-          <div className="flex items-center space-x-1 sm:space-x-2">
-            <LanguageDropdown />
-            <SelectTheme />
-            <Button
-              onClick={() => setSidebarOpen(true)}
-              className="md:hidden cursor-pointer bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50"
-              variant="none"
-              aria-label="Abrir menú"
-            >
-              <Icons.menu className="h-6 w-6 text-gray-900 dark:text-white" />
-            </Button>
+            <div className="flex items-center space-x-1 sm:space-x-2">
+              <LanguageDropdown />
+              <SelectTheme />
+              <Button
+                onClick={() => setSidebarOpen(true)}
+                className="md:hidden cursor-pointer bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50"
+                variant="none"
+                aria-label="Abrir menú"
+              >
+                <Icons.menu className="h-6 w-6 text-gray-900 dark:text-white" />
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
 
       {/* Menú lateral para pantallas pequeñas */}
       <SmallScreen
@@ -147,6 +148,6 @@ export const Navbar = () => {
         handleNavigation={handleNavigation}
         sections={sections}
       />
-    </nav>
+    </>
   );
 };

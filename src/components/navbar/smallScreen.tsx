@@ -146,7 +146,6 @@ const SmallScreen = ({
             </ul>
           </nav>
 
-          {/* Footer */}
           <footer className="mt-auto pt-4 border-t border-slate-300 dark:border-neutral-800 text-center">
             <p className="text-sm text-gray-500 dark:text-gray-400">
               © {new Date().getFullYear()} {t_common("my_portfolio")}
