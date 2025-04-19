@@ -1,12 +1,7 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  output: "export",
-};
+const nextConfig: NextConfig = {};
 
 const withNextIntl = createNextIntlPlugin();
 export default withNextIntl(nextConfig);
