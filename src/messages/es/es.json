@@ -1,0 +1,70 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "about": "Sobre mi",
+        "projects": "Proyectos",
+        "experience": "Experiencia",
+        "education": "Educación",
+        "contact": "Contacto",
+        "info": "Información"
+    },
+    "index": {
+        "title": "Desarrollador Fullstack",
+        "description": "Soy James Córdoba, desarrollador web fullstack apasionado por crear soluciones innovadoras que mejoran la experiencia del usuario. Con habilidades en frontend y backend, combino técnica y creatividad para transformar ideas en productos funcionales y de impacto. Me motiva seguir aprendiendo, aportar valor real y crecer junto a equipos que buscan ir más allá."
+    },
+    "footer": {
+        "copyright": "© {year} Mi portafolio. Todos los derechos reservados.",
+        "privacy_policy": "Política de Privacidad",
+        "terms_of_service": "Términos de Servicio"
+    },
+    "common": {
+        "my_portfolio": "Mi Portafolio",
+        "view_more": "Ver más",
+        "complete_fields": "Por favor, complete todos los campos.",
+        "error_network": "Ocurrió un error de red. Inténtalo de nuevo.",
+        "in_process": "En proceso",
+        "coming_soon": "Próximamente",
+        "my_skills": "Mis habilidades",
+        "current": "Actualmente"
+    },
+    "theme": {
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+    },
+    "language": {
+        "english": "Inglés",
+        "spanish": "Español"
+    },
+    "projects": {
+        "title": "Mi lista de proyectos",
+        "description": "Aquí hay una lista de mis proyectos más destacados.",
+        "no_projects": "No hay proyectos disponibles en este momento.",
+        "view_site": "Ver sitio",
+        "view_code": "Ver código"
+    },
+    "experience": {
+        "title": "Experiencia",
+        "all_experience": "Toda mi experiencia",
+        "description": "Aquí hay una lista de mi experiencia laboral.",
+        "no_experience": "No hay experiencia disponible en este momento."
+    },
+    "education": {
+        "title": "Educación",
+        "all_education": "Toda mi educación",
+        "description": "Aquí hay una lista de mi educación.",
+        "no_education": "No hay educación disponible en este momento."
+    },
+    "contact": {
+        "title": "Contacto",
+        "description": "Si deseas ponerte en contacto conmigo, ¿Tienes alguna pregunta o propuesta?, por favor completa el formulario a continuación.",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "temporary_email": "Lo sentimos, no se permite el uso de correos temporales.",
+        "message": "Mensaje",
+        "send": "Enviar mensaje",
+        "sending": "Enviando...",
+        "success": "¡Mensaje enviado con éxito!, me pondré en contacto contigo lo antes posible.",
+        "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+    }
+}
