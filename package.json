@@ -26,6 +26,7 @@
     "@types/node": "22.14.1",
     "@types/react": "^19",
     "eslint": "^9.25.0",
+    "eslint-config-next": "^15.3.1",
     "typescript": "^5"
   },
   "jest": {
