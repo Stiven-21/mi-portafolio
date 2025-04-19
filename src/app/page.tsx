@@ -21,7 +21,7 @@ export default function Home() {
           delay={0.2}
         >
           <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
-            <div className="md:w-1/4 mb-6 md:mb-0 flex justify-center md:justify-start lg:justify-end lg:mr-10">
+            <div className="md:w-1/4 mb-6 md:mb-0 flex justify-center mr-0 md:justify-start md:mr-5 lg:justify-end lg:mr-10">
               <ScrollAnimator
                 direction="right"
                 delay={0.2}
