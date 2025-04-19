@@ -13,7 +13,7 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    url: "www.linkedin.com/in/james-cordoba-a93437272",
+    url: "https://www.linkedin.com/in/james-cordoba-a93437272",
     icon: Social.linkedin,
   },
 ];

@@ -12,7 +12,7 @@ export const experienceData: Experience[] = [
   {
     id: 2,
     company: "FUNDACIÓN PARA EL DESARROLLO SOCIAL (FUPADESO)",
-    location: "Moca, Colombia",
+    location: "Mocoa, Colombia",
     role: "Técnico administrativo",
     startDate: "2023-02",
     endDate: null,
