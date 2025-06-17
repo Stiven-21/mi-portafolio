@@ -16,7 +16,16 @@ export const experienceData: Experience[] = [
     role: "Técnico administrativo",
     startDate: "2023-02",
     endDate: null,
-    description: [],
+    description: [
+      "Efectuar los podidos, compras de suministros para la ejecución del Programa de alimentación escolar - PAE en el departamento del Putumayo.",
+      "Realizar remisión de entrega de víveres para cada institución educativa en los formatos establecidos por el MEN de acuerdo con los cupos asignados para cada una. De dichos formatos se debe remitir copia para que repose en los comedores escolares.",
+      "Realizar las actividades necesarias para reposición de los faltantes de alimentos o las devoluciones de los mismos que no cumplan con las características establecidas en las fichas técnicas.",
+      "Apoyar en el seguimiento de los proveedores de grano para su facturación y consolidado general mensual.",
+      "Participar y apoyar a FUNDACION PARA EL DESARROLLO SOCIAL - FUPADESO en todas las reuniones a las que éste lo convoque relacionadas con la ejecución del contrato.",
+      "Apoyar en las actividades administrativas en la ejecución del contrato.",
+      "Apoyar en la gestión documental de los informes y demás información en la ejecución del contrato.",
+      "Las demás que se deriven que sean propias de! cumplimiento del objeto del contrato.",
+    ],
   },
   {
     id: 1,
