@@ -25,11 +25,11 @@ export const educationData: Education[] = [
   },
   {
     id: 4,
-    institution: "Instituto Tecnológico del Putumayo",
+    institution: "Institución Universitaria del Putumayo",
     degree: "Ingeniería de sistemas",
     type: "Pregrado",
     startDate: "2021",
-    endDate: null,
+    endDate: "2022",
   },
   {
     id: 3,
