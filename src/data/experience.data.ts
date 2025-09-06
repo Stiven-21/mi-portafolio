@@ -15,7 +15,7 @@ export const experienceData: Experience[] = [
     location: "Mocoa, Colombia",
     role: "Técnico administrativo",
     startDate: "2023-02",
-    endDate: null,
+    endDate: "2025-08",
     description: [
       "Efectuar los podidos, compras de suministros para la ejecución del Programa de alimentación escolar - PAE en el departamento del Putumayo.",
       "Realizar remisión de entrega de víveres para cada institución educativa en los formatos establecidos por el MEN de acuerdo con los cupos asignados para cada una. De dichos formatos se debe remitir copia para que repose en los comedores escolares.",
