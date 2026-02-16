@@ -1,0 +1,54 @@
+name: Automated Release (npm)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: "npm"
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Configurar Git para el Bot
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump Version & Generate Tag
+        id: tag_version
+        run: |
+          # Ejecutamos standard-version usando npx
+          npx standard-version
+
+          # Extraemos la versión para el siguiente paso
+          NEW_VERSION=$(node -p "require('./package.json').version")
+          echo "version=v$NEW_VERSION" >> $GITHUB_OUTPUT
+
+          git push --follow-tags origin main
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag_version.outputs.version }}
+          generate_release_notes: true
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
