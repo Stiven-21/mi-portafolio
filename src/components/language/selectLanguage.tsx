@@ -9,17 +9,20 @@ import {
   memo,
 } from "react";
 import ClickOutSide from "@/common/ClickOutSide/ClickOutSide";
-import { themeOptions } from "@/data/theme.data";
-import { useTheme } from "@/provider/theme.provider";
+// import { themeOptions } from "@/data/theme.data";
+import { languageOptions } from "@/data/language.data";
+import { useLanguage } from "@/provider/language.provider";
+import { Language } from "@/lib/server/language";
+import Flag from "react-world-flags";
 import { useAppTranslations } from "@/hooks/translations/useAppTranslations";
 
-const SelectTheme = () => {
-  const [theme, setTheme] = useTheme();
+const SelectLanguage = () => {
+  const [language, setLanguage] = useLanguage();
   const [isPending, startTransition] = useTransition();
   const [showDropdown, setShowDropdown] = useState(false);
   const [dropUp, setDropUp] = useState(false);
   const dropdownRef = useRef<HTMLUListElement>(null);
-  const { t_theme } = useAppTranslations();
+  const { t_language } = useAppTranslations();
 
   useEffect(() => {
     if (!showDropdown) return;
@@ -33,17 +36,18 @@ const SelectTheme = () => {
     }
   }, [showDropdown]);
 
-  const handleChangeTheme = useCallback(
-    (tm: "light" | "dark" | "system") => {
-      if (isPending || theme === tm) return;
-      startTransition(() => setTheme(tm));
+  const handleChangeLanguage = useCallback(
+    (lang: Language) => {
+      if (isPending || language === lang) return;
+      startTransition(() => setLanguage(lang));
       setShowDropdown(false);
     },
-    [isPending, theme, setTheme],
+    [isPending, language, setLanguage],
   );
 
-  const selectedThemeOption =
-    themeOptions.find((t) => t.value === theme) || themeOptions[0];
+  const selectedLanguageOption = languageOptions.find(
+    (option) => option.value === language,
+  );
 
   return (
     <ClickOutSide
@@ -54,7 +58,9 @@ const SelectTheme = () => {
         onClick={() => setShowDropdown(!showDropdown)}
         className="flex items-center justify-between cursor-pointer w-full px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50"
       >
-        <span className="flex items-center">{selectedThemeOption.icon}</span>
+        <span className="flex items-center gap-x-1">
+          {selectedLanguageOption?.code}
+        </span>
       </button>
 
       <ul
@@ -67,18 +73,22 @@ const SelectTheme = () => {
             : "max-h-0 border-0"
         }`}
       >
-        {themeOptions.map((t) => (
-          <li key={t.value}>
+        {languageOptions.map((lang) => (
+          <li key={lang.value}>
             <button
-              onClick={() => handleChangeTheme(t.value)}
+              onClick={() => handleChangeLanguage(lang.value)}
               className={`w-full cursor-pointer px-4 py-2 flex items-center gap-3 text-left hover:bg-gray-200 dark:hover:bg-gray-700 ${
-                t.value === theme
+                lang.value === language
                   ? "text-sky-500"
                   : "text-slate-950 dark:text-slate-50"
               }`}
             >
-              {t.icon}
-              {t_theme(t.value.toUpperCase())}
+              <Flag
+                code={lang.code}
+                height={20}
+                width={20}
+              />
+              {t_language(lang["text-dropdown"])}
             </button>
           </li>
         ))}
@@ -87,4 +97,4 @@ const SelectTheme = () => {
   );
 };
 
-export default memo(SelectTheme);
+export default memo(SelectLanguage);

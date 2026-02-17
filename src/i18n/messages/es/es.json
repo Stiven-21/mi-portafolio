@@ -18,7 +18,7 @@
         "terms_of_service": "Términos de Servicio"
     },
     "common": {
-        "my_portfolio": "Mi Portafolio",
+        "my_portfolio": "JamDev",
         "view_more": "Ver más",
         "complete_fields": "Por favor, complete todos los campos.",
         "error_network": "Ocurrió un error de red. Inténtalo de nuevo.",
@@ -28,13 +28,13 @@
         "current": "Actualmente"
     },
     "theme": {
-        "light": "Claro",
-        "dark": "Oscuro",
-        "system": "Sistema"
+        "LIGHT": "Claro",
+        "DARK": "Oscuro",
+        "SYSTEM": "Sistema"
     },
     "language": {
-        "english": "Inglés",
-        "spanish": "Español"
+        "ENGLISH": "Inglés",
+        "SPANISH": "Español"
     },
     "projects": {
         "title": "Mi lista de proyectos",

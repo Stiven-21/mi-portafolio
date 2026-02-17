@@ -6,10 +6,11 @@ import { useState, useEffect } from "react";
 import { Icons } from "@/components/icons";
 import { usePathname, useRouter } from "next/navigation";
 import SelectTheme from "../theme/selectTheme";
-import LanguageDropdown from "../language/languageDropdown";
 import SmallScreen from "./smallScreen";
 import { sections } from "@/data/navbar.interface";
 import { Translations } from "@/common/Translations/translations";
+import SelectLanguage from "../language/selectLanguage";
+import { HiMiniCommandLine } from "react-icons/hi2";
 
 export const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -49,7 +50,7 @@ export const Navbar = () => {
         root: null,
         rootMargin: "0px 0px -80% 0px",
         threshold: 0,
-      }
+      },
     );
 
     sectionElements.forEach(({ element }) => {
@@ -86,51 +87,82 @@ export const Navbar = () => {
   return (
     <>
       <nav
-        className={`border-b sticky top-0 z-30 transition-colors duration-300 ease-in-out ${
-          hasScrolled || sidebarOpen
-            ? "bg-slate-100/95 dark:bg-slate-900/95 backdrop-blur-sm border-b-slate-300 dark:border-b-neutral-800"
-            : "bg-transparent border-transparent"
-        }`}
+        className="sticky top-0 z-40 py-4 px-10"
+        // className={`border-b sticky top-0 z-30 transition-colors duration-300 ease-in-out ${
+        //   hasScrolled || sidebarOpen
+        //     ? "bg-slate-100/95 dark:bg-slate-900/95 backdrop-blur-sm border-b-slate-300 dark:border-b-neutral-800"
+        //     : "bg-transparent border-transparent"
+        // }`}
       >
-        <div className="container mx-auto py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="container mx-auto py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between rounded-xl bg-slate-100/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-900">
           <Link
             href="/"
-            className="text-xl font-bold italic text-gray-900 dark:text-white"
+            className="text-xl font-bold italic text-gray-900 dark:text-white items-center flex gap-x-2 hover:text-sky-400"
           >
+            <span className="p-2 bg-blue-600 rounded-xl text-white">
+              <HiMiniCommandLine className="h-5 w-5" />
+            </span>
             {t_common("my_portfolio")}
           </Link>
 
           <div className="flex items-center space-x-2 md:space-x-4">
             {/* Botones del navbar en pantallas grandes */}
-            <div className="hidden md:flex space-x-1">
-              {sections.map((section) => (
-                <Button
-                  key={section.href}
-                  asChild
-                  variant="none"
-                  className={`
-                  ${
-                    (pathname === section.href && section.href !== "#") ||
-                    (section.href.startsWith("#") &&
-                      activeSection === section.href)
-                      ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-                      : "hover:bg-gray-200 dark:hover:bg-gray-700"
-                  }
-                  px-3 py-2 text-sm font-medium
-                `}
-                  onClick={() => handleNavigation(section.href)}
-                >
-                  <Link href={section.href}>{t_navbar(section.label)}</Link>
-                </Button>
-              ))}
+            <div className="hidden lg:flex space-x-2">
+              {sections.map((section) => {
+                const isActive =
+                  (pathname === section.href && section.href !== "#") ||
+                  (section.href.startsWith("#") &&
+                    activeSection === section.href);
+
+                return (
+                  <Button
+                    key={section.href}
+                    asChild
+                    variant="none"
+                    className={`
+                      px-5 py-2.5
+                      rounded-2xl
+                      transition-all duration-300
+                      text-sm font-medium
+
+                      bg-slate-100/90 dark:bg-slate-900/90
+                      
+                      ${
+                        isActive
+                          ? `
+                          select-all
+                          text-sky-400
+                          [text-shadow:0_0_8px_rgba(0,90,255,0.2)]
+                          dark:[text-shadow:0_0_8px_rgba(0,90,255,1)]
+                          -translate-y-0.5
+                          z-10
+                          shadow-[0_6px_14px_rgba(0,0,0,0.2),0_1px_3px_rgba(0,0,0,0.1)]
+                          dark:shadow-[0_6px_14px_rgba(0,0,0,0.6),0_1px_3px_rgba(0,0,0,0.1)]
+                        `
+                          : `
+                          select-none
+                          hover:text-sky-400
+                          text-slate-400
+                          shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_4px_rgba(255,255,255,1)]
+                          dark:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.6),inset_-2px_-2px_4px_rgba(255,255,255,0.04)]
+                        `
+                      }
+                    `}
+                    onClick={() => handleNavigation(section.href)}
+                  >
+                    <Link href={section.href}>{t_navbar(section.label)}</Link>
+                  </Button>
+                );
+              })}
             </div>
 
+            {/* Settings */}
             <div className="flex items-center space-x-1 sm:space-x-2">
-              <LanguageDropdown />
+              <SelectLanguage />
               <SelectTheme />
               <Button
                 onClick={() => setSidebarOpen(true)}
-                className="md:hidden cursor-pointer bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50"
+                className="lg:hidden cursor-pointer bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50"
                 variant="none"
                 aria-label="Abrir menú"
               >
