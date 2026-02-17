@@ -13,21 +13,12 @@ import SelectLanguage from "../language/selectLanguage";
 import { HiMiniCommandLine } from "react-icons/hi2";
 
 export const Navbar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const pathname = usePathname();
   const router = useRouter();
   const { t_navbar, t_common } = Translations();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Detectar sección visible en pantalla
   useEffect(() => {
@@ -86,14 +77,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav
-        className="sticky top-0 z-40 py-4 px-10"
-        // className={`border-b sticky top-0 z-30 transition-colors duration-300 ease-in-out ${
-        //   hasScrolled || sidebarOpen
-        //     ? "bg-slate-100/95 dark:bg-slate-900/95 backdrop-blur-sm border-b-slate-300 dark:border-b-neutral-800"
-        //     : "bg-transparent border-transparent"
-        // }`}
-      >
+      <nav className="sticky bg-transparent top-0 z-40 py-4 px-10">
         <div className="container mx-auto py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between rounded-xl bg-slate-100/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-900">
           <Link
             href="/"

@@ -9,6 +9,13 @@
         "info": "Info"
     },
     "index": {
+        "HERO_AVAILABLE": "AVAILABLE FOR PROJECTS",
+        "HERO_DEVELOPER": "Developer",
+        "FULL_STACK": "Full Stack",
+        "HERO_CREATING": "creating",
+        "HERO_EXPERIENCE": "experiences",
+        "HERO_DIGITAL": "digital",
+        "HERO_DESCRIPTION": "Specialist in robust and scalable solutions with a focus on premium design, immersive interfaces, and technological excellence.",
         "title": "Fullstack Developer",
         "description": "I'm James Córdoba, a fullstack web developer passionate about building innovative solutions that enhance user experience. With skills in frontend and backend, I blend technical expertise and creativity to turn ideas into impactful, functional products. I'm driven by continuous learning, real value creation, and growing alongside teams that aim higher."
     },
