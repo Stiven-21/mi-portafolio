@@ -9,6 +9,7 @@ import ThemeProvider from "@/provider/theme.provider";
 import LanguageProvider from "@/provider/language.provider";
 import { getTheme } from "@/lib/server/theme";
 import { Language } from "@/lib/server/language";
+import { LandingProvider } from "@/provider/landing.provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,17 +74,19 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-slate-950 dark:text-white from-slate-50 to-slate-100 0 bg-radial dark:from-slate-900 from-20% dark:to-slate-950 transition-colors flex flex-col min-h-screen overflow-auto `}
       >
-        <ThemeProvider initialTheme={theme}>
-          <LanguageProvider initialLanguage={locale as Language}>
-            <NextIntlClientProvider>
-              <main className="grow">
-                <Navbar />
-                {children}
-              </main>
-              <Footer />
-            </NextIntlClientProvider>
-          </LanguageProvider>
-        </ThemeProvider>
+        <LandingProvider>
+          <ThemeProvider initialTheme={theme}>
+            <LanguageProvider initialLanguage={locale as Language}>
+              <NextIntlClientProvider>
+                <main className="grow">
+                  <Navbar />
+                  {children}
+                </main>
+                <Footer />
+              </NextIntlClientProvider>
+            </LanguageProvider>
+          </ThemeProvider>
+        </LandingProvider>
       </body>
     </html>
   );

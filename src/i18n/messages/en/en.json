@@ -1,7 +1,7 @@
 {
     "navbar": {
         "home": "Home",
-        "about": "About",
+        "about": "About me",
         "projects": "Projects",
         "experience": "Experience",
         "education": "Education",
@@ -15,9 +15,16 @@
         "HERO_CREATING": "creating",
         "HERO_EXPERIENCE": "experiences",
         "HERO_DIGITAL": "digital",
-        "HERO_DESCRIPTION": "Specialist in robust and scalable solutions with a focus on premium design, immersive interfaces, and technological excellence.",
-        "title": "Fullstack Developer",
-        "description": "I'm James Córdoba, a fullstack web developer passionate about building innovative solutions that enhance user experience. With skills in frontend and backend, I blend technical expertise and creativity to turn ideas into impactful, functional products. I'm driven by continuous learning, real value creation, and growing alongside teams that aim higher."
+        "HERO_DESCRIPTION": "Specialist in robust and scalable solutions with a focus on premium design, immersive interfaces, and technological excellence."
+    },
+    "professional": {
+        "PROFESSIONAL_CAREER": "Career",
+        "PROFESSIONAL_PROFESSIONAL": "Professional",
+        "PROFESSIONAL_EXPERIENCE": "Experience transforming ideas into code. My focus combines solid technical architecture with modern aesthetic sensitivity.",
+        "PROFESSIONAL_TECHNICAL_SKILLS": "Technical skills",
+        "PROFESSIONAL_FRONTEND_ARCHITECTURE": "Frontend Architecture",
+        "PROFESSIONAL_BACKEND_API_DESIGN": "Backend and API Design",
+        "PROFESSIONAL_DEVOPS_CLOUD": "DevOps and Cloud"
     },
     "footer": {
         "copyright": "© {year} My Portfolio. All rights reserved.",

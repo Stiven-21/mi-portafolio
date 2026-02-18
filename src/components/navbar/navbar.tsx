@@ -8,9 +8,9 @@ import { usePathname, useRouter } from "next/navigation";
 import SelectTheme from "../theme/selectTheme";
 import SmallScreen from "./smallScreen";
 import { sections } from "@/data/navbar.interface";
-import { Translations } from "@/common/Translations/translations";
 import SelectLanguage from "../language/selectLanguage";
 import { HiMiniCommandLine } from "react-icons/hi2";
+import { useAppTranslations } from "@/hooks/translations/useAppTranslations";
 
 export const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   const pathname = usePathname();
   const router = useRouter();
-  const { t_navbar, t_common } = Translations();
+  const { t_navbar, t_common } = useAppTranslations();
 
   // Detectar sección visible en pantalla
   useEffect(() => {
@@ -78,7 +78,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className="sticky bg-transparent top-0 z-40 py-4 px-10">
-        <div className="container mx-auto py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between rounded-xl bg-slate-100/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-900">
+        <div className="container mx-auto py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between rounded-xl bg-slate-200/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-900">
           <Link
             href="/"
             className="text-xl font-bold italic text-gray-900 dark:text-white items-center flex gap-x-2 hover:text-sky-400"
@@ -106,11 +106,9 @@ export const Navbar = () => {
                     className={`
                       px-5 py-2.5
                       rounded-2xl
-                      transition-all duration-300
+                      transition duration-150
                       text-sm font-medium
-
-                      bg-slate-100/90 dark:bg-slate-900/90
-                      
+                      bg-slate-200/20 dark:bg-slate-900/20
                       ${
                         isActive
                           ? `
@@ -126,7 +124,7 @@ export const Navbar = () => {
                           : `
                           select-none
                           hover:text-sky-400
-                          text-slate-400
+                          text-slate-500/70 dark:text-slate-400/70
                           shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_4px_rgba(255,255,255,1)]
                           dark:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.6),inset_-2px_-2px_4px_rgba(255,255,255,0.04)]
                         `

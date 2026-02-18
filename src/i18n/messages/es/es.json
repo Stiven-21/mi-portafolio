@@ -15,9 +15,16 @@
         "HERO_CREATING": "creando",
         "HERO_EXPERIENCE": "experiencias",
         "HERO_DIGITAL": "digitales",
-        "HERO_DESCRIPTION": "Especialista en soluciones robustas y escalables con un enfoque en diseño premium, interfaces inmersivas y alto rendimiento tecnológico.",
-        "title": "Desarrollador Fullstack",
-        "description": "Soy James Córdoba, desarrollador web fullstack apasionado por crear soluciones innovadoras que mejoran la experiencia del usuario. Con habilidades en frontend y backend, combino técnica y creatividad para transformar ideas en productos funcionales y de impacto. Me motiva seguir aprendiendo, aportar valor real y crecer junto a equipos que buscan ir más allá."
+        "HERO_DESCRIPTION": "Especialista en soluciones robustas y escalables con un enfoque en diseño premium, interfaces inmersivas y alto rendimiento tecnológico."
+    },
+    "professional": {
+        "PROFESSIONAL_CAREER": "Trayectoria",
+        "PROFESSIONAL_PROFESSIONAL": "Profesional",
+        "PROFESSIONAL_EXPERIENCE": "Experiencia transformando ideas en código. Mi enfoque combina la arquitectura técnica sólida con una sensibilidad estética moderna.",
+        "PROFESSIONAL_TECHNICAL_SKILLS": "Habilidades tecnicas",
+        "PROFESSIONAL_FRONTEND_ARCHITECTURE": "Arquitectura Frontend",
+        "PROFESSIONAL_BACKEND_API_DESIGN": " Diseño de Backend y API",
+        "PROFESSIONAL_DEVOPS_CLOUD": "DevOps y Cloud"
     },
     "footer": {
         "copyright": "© {year} Mi portafolio. Todos los derechos reservados.",

@@ -5,15 +5,23 @@ import {
   HeroSection,
   ProjectsSection,
 } from "@/components/sections";
+import ProfessionalSection from "@/components/sections/ProfessionalSection";
 
 export default function Home() {
   return (
     <>
       <section
         id="home"
-        className=""
+        className="mb-6"
       >
         <HeroSection />
+      </section>
+
+      <section
+        id="about"
+        className="overflow-hidden mb-6"
+      >
+        <ProfessionalSection />
       </section>
 
       <section

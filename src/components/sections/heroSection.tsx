@@ -1,12 +1,14 @@
 "use client";
 
 import { useAppTranslations } from "@/hooks/translations/useAppTranslations";
+import { useLanguage } from "@/provider/language.provider";
 import ScrollAnimator from "@/utils/ScrollAnimator";
 import Image from "next/image";
 import React from "react";
 
 export default function HeroSection() {
   const { t_index } = useAppTranslations();
+  const { "0": language } = useLanguage();
   return (
     <section className="relative w-full flex items-center justify-center overflow-hidden bg-transparent">
       <ScrollAnimator
@@ -25,14 +27,34 @@ export default function HeroSection() {
               </span>
             </div>
             <h1 className="text-5xl sm:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight">
-              {t_index("HERO_DEVELOPER")} <br />
-              <span className="text-blue-500 dark:text-blue-400">
-                {t_index("FULL_STACK")}
-              </span>{" "}
+              {language === "es" ? (
+                <>
+                  {t_index("HERO_DEVELOPER")} <br />
+                  <span className="text-blue-500 dark:text-blue-400">
+                    {t_index("FULL_STACK")}
+                  </span>{" "}
+                </>
+              ) : (
+                <>
+                  <span className="text-blue-500 dark:text-blue-400">
+                    {t_index("FULL_STACK")}
+                  </span>{" "}
+                  {t_index("HERO_DEVELOPER")}
+                </>
+              )}
               <br />
               {t_index("HERO_CREATING")} <br />
-              {t_index("HERO_EXPERIENCE")} <br />
-              {t_index("HERO_DIGITAL")}
+              {language === "es" ? (
+                <>
+                  {t_index("HERO_EXPERIENCE")} <br />
+                  {t_index("HERO_DIGITAL")}
+                </>
+              ) : (
+                <>
+                  {t_index("HERO_DIGITAL")} <br />
+                  {t_index("HERO_EXPERIENCE")}
+                </>
+              )}
             </h1>
 
             <p className="max-w-xl text-lg sm:text-xl text-slate-400 dark:text-slate-600 leading-relaxed">
