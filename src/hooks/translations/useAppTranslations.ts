@@ -9,7 +9,7 @@ export const useAppTranslations = () => {
   const t_projects = useTranslations("projects");
   const t_service = useTranslations("service");
   const t_contact = useTranslations("contact");
-
+  const t_cookie = useTranslations("cookie");
   const t_footer = useTranslations("footer");
   const t_common = useTranslations("common");
 
@@ -22,7 +22,7 @@ export const useAppTranslations = () => {
     t_projects,
     t_service,
     t_contact,
-
+    t_cookie,
     t_footer,
     t_common,
   };

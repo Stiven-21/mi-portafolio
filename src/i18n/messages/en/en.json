@@ -57,9 +57,9 @@
         "SERVICE_CLOUD_SERVICES_DESCRIPTION": "Scalable and cost-effective solutions for managing your services in the cloud."
     },
     "footer": {
-        "copyright": "© {year} My Portfolio. All rights reserved.",
-        "privacy_policy": "Privacy Policy",
-        "terms_of_service": "Terms of Service"
+        "TERMS": "Terms",
+        "PRIVACY": "Privacy",
+        "COOKIES": "Cookies"
     },
     "common": {
         "my_portfolio": "JamDev",
@@ -84,9 +84,7 @@
         "PROJECTS_TITLE_PROJECTS": "projects",
         "PROJECTS_TITLE_FEATURED": "Featured",
         "PROJECTS_DESCRIPTION": "A selection of recent work that demonstrates my ability to solve complex problems.",
-        "no_projects": "No projects available at this time.",
-        "view_site": "View site",
-        "view_code": "View code"
+        "no_projects": "No projects available at this time."
     },
     "contact": {
         "CONTACT_PRESENTATION": "Shall we talk about your next project?",
@@ -105,5 +103,10 @@
         
         "CONTACT_FORM_SEND": "Send",
         "CONTACT_FORM_SENDING": "Sending..."
+    },
+    "cookie": {
+        "COOKIE_BANNER_DESCRIPTION": "We use cookies to improve your experience and analyze traffic through Google Analytics. You can accept or reject analytics cookies.",
+        "COOKIE_BANNER_ACCEPT": "Accept",
+        "COOKIE_BANNER_DECLINE": "Decline"
     }
 }

@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { Icons } from "@/components/icons";
 import { usePathname, useRouter } from "next/navigation";
 import SelectTheme from "../theme/selectTheme";
 import SmallScreen from "./smallScreen";
 import { sections } from "@/data/navbar.interface";
-import SelectLanguage from "../language/selectLanguage";
+import SelectLanguage from "@/components/language/selectLanguage";
 import { HiMiniCommandLine } from "react-icons/hi2";
 import { useAppTranslations } from "@/hooks/translations/useAppTranslations";
+import { TiThMenu } from "react-icons/ti";
 
 export const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -171,9 +171,9 @@ export const Navbar = () => {
                 onClick={() => setSidebarOpen(true)}
                 variant="none"
                 aria-label="Abrir menú"
-                className="lg:hidden cursor-pointer bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50"
+                className="lg:hidden cursor-pointer bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50 focues:outline-none"
               >
-                <Icons.menu className="h-6 w-6 text-gray-900 dark:text-white" />
+                <TiThMenu className="h-6 w-8 " />
               </Button>
             </div>
           </div>
@@ -185,6 +185,7 @@ export const Navbar = () => {
         setSidebarOpen={setSidebarOpen}
         handleNavigation={handleNavigation}
         sections={sections}
+        activeSection={activeSection}
       />
     </>
   );

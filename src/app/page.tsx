@@ -24,10 +24,7 @@ export default function Home() {
         <ProjectsSection />
       </section>
 
-      <section
-        id="services"
-        className=""
-      >
+      <section id="services">
         <ServicesSection />
       </section>
 

@@ -1,14 +1,19 @@
-export interface Skill {
-  id: number;
-  name: string;
-}
+import { Skill } from "@/interfaces/skill.interface";
 
-export const skillsData: Skill[] = [
-  { id: 1, name: "NestJs" },
-  { id: 2, name: "Tailwind css" },
-  { id: 3, name: "Next.js" },
-  { id: 4, name: "React.js" },
-  { id: 5, name: "Typescript" },
-  { id: 6, name: "Javascript" },
-  { id: 7, name: "HTML" },
+export const skills: Skill[] = [
+  {
+    name: "Frontend Architecture",
+    value: 75,
+    code: "PROFESSIONAL_FRONTEND_ARCHITECTURE",
+  },
+  {
+    name: "Backend & API Design",
+    value: 85,
+    code: "PROFESSIONAL_BACKEND_API_DESIGN",
+  },
+  {
+    name: "DevOps & Cloud",
+    value: 65,
+    code: "PROFESSIONAL_DEVOPS_CLOUD",
+  },
 ];

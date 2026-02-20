@@ -57,9 +57,9 @@
         "SERVICE_CLOUD_SERVICES_DESCRIPTION": "Soluciones escalables y costos eficientes para la gestión de tus servicios en la nube."
     },
     "footer": {
-        "copyright": "© {year} Mi portafolio. Todos los derechos reservados.",
-        "privacy_policy": "Política de Privacidad",
-        "terms_of_service": "Términos de Servicio"
+        "TERMS": "Términos",
+        "PRIVACY": "Privacidad",
+        "COOKIES": "Cookies"
     },
     "common": {
         "my_portfolio": "JamDev",
@@ -84,9 +84,7 @@
         "PROJECTS_TITLE_PROJECTS": "Proyectos",
         "PROJECTS_TITLE_FEATURED": "destacados",
         "PROJECTS_DESCRIPTION": "Una selección de trabajos recientes que demuestran mi capacidad para resolver problemas complejos.",
-        "no_projects": "No hay proyectos disponibles en este momento.",
-        "view_site": "Ver sitio",
-        "view_code": "Ver código"
+        "no_projects": "No hay proyectos disponibles en este momento."
     },
     "contact": {
         "CONTACT_PRESENTATION": "¿Hablamos sobre tu próximo proyecto?",
@@ -105,5 +103,11 @@
 
         "CONTACT_FORM_SEND": "Enviar",
         "CONTACT_FORM_SENDING": "Enviando..."
+    },
+    "cookie": {
+        "COOKIE_BANNER_DESCRIPTION": "Utilizamos cookies para mejorar tu experiencia y analizar el tráfico mediante Google Analytics. Puedes aceptar o rechazar las cookies analíticas.",
+        "COOKIE_BANNER_ACCEPT": "Aceptar",
+        "COOKIE_BANNER_DECLINE": "Rechazar"
+
     }
 }

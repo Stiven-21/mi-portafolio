@@ -11,6 +11,7 @@ import { getTheme } from "@/lib/server/theme";
 import { Language } from "@/lib/server/language";
 import { NotificationProvider } from "@/components/notifications/core/NotificationContext";
 import { ToastContainer } from "@/components/notifications/ui/ToastContainer";
+import CookieBanner from "@/components/cookies/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,7 +57,7 @@ export default async function RootLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: script }} />
-        <script
+        {/* <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
@@ -70,7 +71,7 @@ export default async function RootLayout({
               gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
             `,
           }}
-        />
+        /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-slate-950 dark:text-white from-slate-50 to-slate-100 0 bg-radial dark:from-slate-900 from-20% dark:to-slate-950 transition-colors flex flex-col min-h-screen overflow-auto `}
@@ -84,6 +85,7 @@ export default async function RootLayout({
                   {children}
                 </main>
                 <Footer />
+                <CookieBanner />
                 <ToastContainer />
               </NextIntlClientProvider>
             </LanguageProvider>
