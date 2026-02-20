@@ -3,8 +3,7 @@
         "home": "Inicio",
         "about": "Sobre mi",
         "projects": "Proyectos",
-        "experience": "Experiencia",
-        "education": "Educación",
+        "services": "Servicios",
         "contact": "Contacto",
         "info": "Información"
     },
@@ -25,6 +24,37 @@
         "PROFESSIONAL_FRONTEND_ARCHITECTURE": "Arquitectura Frontend",
         "PROFESSIONAL_BACKEND_API_DESIGN": " Diseño de Backend y API",
         "PROFESSIONAL_DEVOPS_CLOUD": "DevOps y Cloud"
+    },
+    "service": {
+        "SERVICE_SERVICES": "Servicios",
+        "SERVICE_PREMIUM": "Premium",
+        "SERVICE_DESCRIPTION": "Soluciones integrales diseñadas para elevar tu presencia digital y optimizar tus procesos tecnológicos.",
+        
+        "SERVICE_WEB_DEVELOPMENT": "Desarrollo Web",
+        "SERVICE_WEB_DEVELOPMENT_DESCRIPTION": "Interfaces modernas, ultra rápidas y optimizadas para SEO utilizando tecnologías de vanguardia.",
+        "SERVICE_FULL_STACK_APPS": "Aplicaciones Full Stack",
+        "SERVICE_FULL_STACK_APPS_DESCRIPTION": "Aplicaciones complejas de extremo a extremo, escalables y seguras para cualquier sector.",
+        "SERVICE_API_INTEGRATION": "Integración de APIs",
+        "SERVICE_API_INTEGRATION_DESCRIPTION": "Diseño y consumo de servicios RESTful y GraphQL con foco en eficiencia y seguridad.",
+        "SERVICE_MAINTENANCE": "Mantenimiento",
+        "SERVICE_MAINTENANCE_DESCRIPTION": "Soporte continuo, actualizaciones y monitoreo proactivo para garantizar estabilidad.",
+        "SERVICE_DESINGN_UI_UX": "Diseño UI/UX",
+        "SERVICE_DESINGN_UI_UX_DESCRIPTION": "Diseño de interfaces atractivas y experiencias de usuario intuitivas para maximizar la satisfacción del cliente.",
+        "SERVICE_TECHNOLOGY_CONSULTING": "Consultoria Tecnológica",
+        "SERVICE_TECHNOLOGY_CONSULTING_DESCRIPTION": "Asesoramiento experto para seleccionar las tecnologías adecuadas y diseñar soluciones a medida para tu negocio.",
+        
+        
+        
+        "SERVICE_APP_DEVELOPMENT": "Desarrollo de Aplicaciones",
+        "SERVICE_APP_DEVELOPMENT_DESCRIPTION": "Aplicaciones complejas de extremo a extremo, escalables y seguras para cualquier sector.",
+        "SERVICE_DIGITAL_MARKETING": "Marketing Digital",
+        "SERVICE_DIGITAL_MARKETING_DESCRIPTION": "Estrategias de marketing eficaces para aumentar tu visibilidad en redes sociales y captar clientes potenciales.",
+        "SERVICE_SEO_OPTIMIZATION": "Optimización SEO",
+        "SERVICE_SEO_OPTIMIZATION_DESCRIPTION": "Mejora de la visibilidad en buscadores y optimización de contenido para mejorar la posicionamiento en los resultados de búsqueda.",
+        "SERVICE_DEVOPS": "DevOps",
+        "SERVICE_DEVOPS_DESCRIPTION": "Automatización de procesos y entrega continua para mejorar la calidad y velocidad de tus proyectos.",
+        "SERVICE_CLOUD_SERVICES": "Servicios en la Nube",
+        "SERVICE_CLOUD_SERVICES_DESCRIPTION": "Soluciones escalables y costos eficientes para la gestión de tus servicios en la nube."
     },
     "footer": {
         "copyright": "© {year} Mi portafolio. Todos los derechos reservados.",
@@ -51,34 +81,29 @@
         "SPANISH": "Español"
     },
     "projects": {
-        "title": "Mi lista de proyectos",
-        "description": "Aquí hay una lista de mis proyectos más destacados.",
+        "PROJECTS_TITLE_PROJECTS": "Proyectos",
+        "PROJECTS_TITLE_FEATURED": "destacados",
+        "PROJECTS_DESCRIPTION": "Una selección de trabajos recientes que demuestran mi capacidad para resolver problemas complejos.",
         "no_projects": "No hay proyectos disponibles en este momento.",
         "view_site": "Ver sitio",
         "view_code": "Ver código"
     },
-    "experience": {
-        "title": "Experiencia",
-        "all_experience": "Toda mi experiencia",
-        "description": "Aquí hay una lista de mi experiencia laboral.",
-        "no_experience": "No hay experiencia disponible en este momento."
-    },
-    "education": {
-        "title": "Educación",
-        "all_education": "Toda mi educación",
-        "description": "Aquí hay una lista de mi educación.",
-        "no_education": "No hay educación disponible en este momento."
-    },
     "contact": {
-        "title": "Contacto",
-        "description": "Si deseas ponerte en contacto conmigo, ¿Tienes alguna pregunta o propuesta?, por favor completa el formulario a continuación.",
-        "name": "Nombre",
-        "email": "Correo electrónico",
-        "temporary_email": "Lo sentimos, no se permite el uso de correos temporales.",
-        "message": "Mensaje",
-        "send": "Enviar mensaje",
-        "sending": "Enviando...",
-        "success": "¡Mensaje enviado con éxito!, me pondré en contacto contigo lo antes posible.",
-        "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+        "CONTACT_PRESENTATION": "¿Hablamos sobre tu próximo proyecto?",
+        "CONTACT_DESCRIPTION": "Estoy disponible para colaboraciones freelance o propuestas de tiempo completo en entornos innovadores.",
+        
+        "CONTACT_FORM_NAME": "Nombre",
+        "CONTACT_FORM_NAME_REQUIRED": "¿Cómo te gustaría que te llamemos?",
+
+        "CONTACT_FORM_EMAIL": "Correo electrónica",
+        "CONTACT_FORM_EMAIL_REQUIRED": "Necesitamos un correo válido para responderte. (e.g. john@example.com)",
+        "CONTACT_FORM_EMAIL_NOT_TEMPORARY": "Para poder responderte, necesitamos un correo personal o corporativo.",
+
+        "CONTACT_FORM_MESSAGE": "Mensaje",
+        "CONTACT_FORM_MESSAGE_PLACEHOLDER": "¿Cómo puedo ayudarte?",
+        "CONTACT_FORM_MESSAGE_REQUIRED": "Escribe tu mensaje para continuar.",
+
+        "CONTACT_FORM_SEND": "Enviar",
+        "CONTACT_FORM_SENDING": "Enviando..."
     }
 }

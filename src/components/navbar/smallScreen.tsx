@@ -1,9 +1,9 @@
 "use client";
 import { Icons } from "../icons";
 import { Section } from "@/data/navbar.interface";
+import { useAppTranslations } from "@/hooks/translations/useAppTranslations";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Translations } from "@/common/Translations/translations";
 
 interface SmallScreenProps {
   sidebarOpen: boolean;
@@ -18,7 +18,7 @@ const SmallScreen = ({
   handleNavigation,
   sections,
 }: SmallScreenProps) => {
-  const { t_common, t_navbar } = Translations();
+  const { t_common, t_navbar } = useAppTranslations();
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
@@ -60,7 +60,7 @@ const SmallScreen = ({
         root: null,
         rootMargin: "0px 0px -80% 0px",
         threshold: 0,
-      }
+      },
     );
 
     sectionElements.forEach(({ element }) => {
@@ -94,7 +94,7 @@ const SmallScreen = ({
       <aside
         className={`
           bg-slate-100 dark:bg-slate-900 text-gray-900 dark:text-white 
-          block md:hidden shadow-lg fixed top-0 right-0 h-screen 
+          block lg:hidden shadow-lg fixed top-0 right-0 h-screen 
           w-full max-w-xs sm:max-w-sm z-50 p-6
           transition-transform duration-300 ease-in-out 
           ${sidebarOpen ? "translate-x-0" : "translate-x-full"}
@@ -116,7 +116,7 @@ const SmallScreen = ({
             </button>
           </header>
 
-          <nav className="flex-grow overflow-y-auto">
+          <nav className="grow overflow-y-auto">
             <ul className="flex flex-col space-y-2">
               {sections.map((section) => {
                 const isActive =

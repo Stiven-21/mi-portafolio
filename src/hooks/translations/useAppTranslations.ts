@@ -6,13 +6,12 @@ export const useAppTranslations = () => {
   const t_language = useTranslations("language");
   const t_theme = useTranslations("theme");
   const t_professional = useTranslations("professional");
+  const t_projects = useTranslations("projects");
+  const t_service = useTranslations("service");
+  const t_contact = useTranslations("contact");
 
   const t_footer = useTranslations("footer");
   const t_common = useTranslations("common");
-  const t_experience = useTranslations("experience");
-  const t_education = useTranslations("education");
-  const t_projects = useTranslations("projects");
-  const t_contact = useTranslations("contact");
 
   return {
     t_index,
@@ -20,12 +19,11 @@ export const useAppTranslations = () => {
     t_language,
     t_theme,
     t_professional,
+    t_projects,
+    t_service,
+    t_contact,
 
     t_footer,
     t_common,
-    t_experience,
-    t_education,
-    t_projects,
-    t_contact,
   };
 };

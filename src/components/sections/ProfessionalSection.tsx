@@ -26,7 +26,7 @@ export default function ProfessionalSection() {
   const { t_professional } = useAppTranslations();
   const { "0": language } = useLanguage();
   return (
-    <section className="relative w-full min-h-36 py-12 px-6 lg:px-12 bg-white dark:bg-slate-950">
+    <section className="relative w-full min-h-36 py-24 px-6 lg:px-12 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
         {/* LEFT SIDE - Timeline */}
         <ScrollAnimator
@@ -37,12 +37,12 @@ export default function ProfessionalSection() {
             {language === "es" ? (
               t_professional("PROFESSIONAL_CAREER")
             ) : (
-              <span className="text-blue-500">
+              <span className="text-blue-700 dark:text-blue-600">
                 {t_professional("PROFESSIONAL_PROFESSIONAL")}
               </span>
             )}{" "}
             {language === "es" ? (
-              <span className="text-blue-500">
+              <span className="text-blue-700 dark:text-blue-600">
                 {t_professional("PROFESSIONAL_PROFESSIONAL")}
               </span>
             ) : (
@@ -59,7 +59,7 @@ export default function ProfessionalSection() {
             <div className="relative">
               <span className="absolute -left-9.5 z-10 top-1 w-3 h-3 bg-blue-500 rounded-full"></span>
               <span className="absolute -left-9.5 z-0 animate-ping top-1 w-3 h-3 bg-blue-500 rounded-full"></span>
-              <p className="text-blue-500 text-sm font-semibold">
+              <p className="text-blue-700 dark:text-blue-600 text-sm font-semibold">
                 2026 - ACTUALIDAD
               </p>
               <h3 className="font-semibold text-lg">
@@ -78,7 +78,7 @@ export default function ProfessionalSection() {
           delay={0.2}
         >
           {/* Tech Cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12 mt-4 px-2">
             <TechCard
               icon={<FaCode className="w-7 h-7" />}
               title="React"
@@ -117,7 +117,7 @@ export default function ProfessionalSection() {
 
                   <div className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-blue-500 rounded-full transition-all duration-1000 ease-out"
+                      className="h-full bg-blue-700 dark:bg-blue-600 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${skill.value}%` }}
                     />
                   </div>
@@ -139,7 +139,7 @@ type TechCardProps = {
 function TechCard({ icon, title }: TechCardProps) {
   return (
     <div className="group p-6 rounded-2xl bg-slate-100 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 backdrop-blur-md hover:shadow-blue-700/50 hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <div className="text-blue-500 mb-4">{icon}</div>
+      <div className="text-blue-700 dark:text-blue-600 mb-4">{icon}</div>
       <p className="font-semibold">{title}</p>
     </div>
   );

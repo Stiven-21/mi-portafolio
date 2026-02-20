@@ -54,7 +54,9 @@ const SelectTheme = () => {
         onClick={() => setShowDropdown(!showDropdown)}
         className="flex items-center justify-between cursor-pointer w-full px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50"
       >
-        <span className="flex items-center">{selectedThemeOption.icon}</span>
+        <span className="flex items-center">
+          {<selectedThemeOption.icon className="w-6 h-6" />}
+        </span>
       </button>
 
       <ul
@@ -77,7 +79,7 @@ const SelectTheme = () => {
                   : "text-slate-950 dark:text-slate-50"
               }`}
             >
-              {t.icon}
+              {<t.icon className="w-5 h-5" />}
               {t_theme(t.value.toUpperCase())}
             </button>
           </li>

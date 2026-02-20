@@ -5,14 +5,14 @@ import { Theme } from "@/interfaces/theme.interface";
 export const themeOptions: Theme[] = [
   {
     value: "light",
-    icon: <MdLightMode className="h-5 w-5" />,
+    icon: MdLightMode,
   },
   {
     value: "dark",
-    icon: <MdDarkMode className="h-5 w-5" />,
+    icon: MdDarkMode,
   },
   {
     value: "system",
-    icon: <GrPersonalComputer className="h-5 w-5" />,
+    icon: GrPersonalComputer,
   },
 ];

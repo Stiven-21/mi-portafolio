@@ -10,7 +10,7 @@ export default function HeroSection() {
   const { t_index } = useAppTranslations();
   const { "0": language } = useLanguage();
   return (
-    <section className="relative w-full flex items-center justify-center overflow-hidden bg-transparent">
+    <section className="relative w-full flex items-center justify-center overflow-hidden bg-transparent pb-12">
       <ScrollAnimator
         direction="up"
         delay={0.2}
@@ -30,13 +30,13 @@ export default function HeroSection() {
               {language === "es" ? (
                 <>
                   {t_index("HERO_DEVELOPER")} <br />
-                  <span className="text-blue-500 dark:text-blue-400">
+                  <span className="text-blue-700 dark:text-blue-600">
                     {t_index("FULL_STACK")}
                   </span>{" "}
                 </>
               ) : (
                 <>
-                  <span className="text-blue-500 dark:text-blue-400">
+                  <span className="text-blue-700 dark:text-blue-600">
                     {t_index("FULL_STACK")}
                   </span>{" "}
                   {t_index("HERO_DEVELOPER")}
@@ -57,7 +57,7 @@ export default function HeroSection() {
               )}
             </h1>
 
-            <p className="max-w-xl text-lg sm:text-xl text-slate-400 dark:text-slate-600 leading-relaxed">
+            <p className="max-w-xl text-lg sm:text-xl text-slate-500 dark:text-slate-600 leading-relaxed">
               {t_index("HERO_DESCRIPTION")}
             </p>
           </div>

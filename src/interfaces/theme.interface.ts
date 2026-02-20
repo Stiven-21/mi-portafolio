@@ -1,4 +1,6 @@
+import { IconType } from "react-icons";
+
 export interface Theme {
   value: "light" | "dark" | "system";
-  icon: React.ReactNode;
+  icon: IconType;
 }

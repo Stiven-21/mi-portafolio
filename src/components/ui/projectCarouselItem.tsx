@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Project } from "@/data/projects.data";
 import { useTranslations } from "next-intl";
+import { Project } from "@/interfaces/project.interface";
 
 interface ProjectCarouselItemProps {
   project: Project;
@@ -27,10 +27,10 @@ const ProjectCarouselItem = ({
         text-gray-900 dark:text-white
       `}
     >
-      <div className="flex-shrink-0 h-48 w-full relative">
+      <div className="shrink-0 h-48 w-full relative">
         {" "}
         <Image
-          src={project.imageUrl}
+          src={project.image}
           alt={`Imagen del proyecto ${project.title}`}
           layout="fill"
           objectFit="cover"
@@ -38,12 +38,12 @@ const ProjectCarouselItem = ({
         />
       </div>
 
-      <div className="p-4 md:p-5 flex flex-col flex-grow">
+      <div className="p-4 md:p-5 flex flex-col grow">
         {" "}
         <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-400">
           {project.title}
         </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 flex-grow">
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 grow">
           {" "}
           {project.description}
         </p>
@@ -61,9 +61,9 @@ const ProjectCarouselItem = ({
         )}
         <div className="mt-auto flex justify-start space-x-4 pt-3 border-t border-gray-200 dark:border-gray-700">
           {" "}
-          {project.projectUrl && (
+          {project.liveUrl && (
             <a
-              href={project.projectUrl}
+              href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"

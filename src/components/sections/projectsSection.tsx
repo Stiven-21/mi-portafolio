@@ -1,18 +1,22 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-// import Link from "next/link";
 import { projectsData } from "@/data/projects.data";
-import ProjectCarouselItem from "../ui/projectCarouselItem";
 import ScrollAnimator from "@/utils/ScrollAnimator";
-import { Icons } from "../icons";
-import { useTranslations } from "next-intl";
+import { Project } from "@/interfaces/project.interface";
+import Image from "next/image";
+import { useAppTranslations } from "@/hooks/translations/useAppTranslations";
+import { useLanguage } from "@/provider/language.provider";
+import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa6";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
   const carouselRef = useRef<HTMLDivElement>(null);
   const allProjects = projectsData;
-  const t_projects = useTranslations("projects");
+
+  const { t_projects } = useAppTranslations();
+  const { "0": language } = useLanguage();
 
   useEffect(() => {
     const updateItemsPerPage = () => {
@@ -60,16 +64,69 @@ const ProjectsSection = () => {
   return (
     <>
       {" "}
-      <div className="container mx-auto">
+      <div className="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto space-y-16">
+        {/* TITLE AND DESCRIPTION */}
         <ScrollAnimator direction="up">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-5 text-gray-900 dark:text-white">
-            {t_projects("title")}
-          </h2>
+          <div>
+            <h2 className="text-4xl font-bold ">
+              {language === "es" ? (
+                <>
+                  {" "}
+                  {t_projects("PROJECTS_TITLE_PROJECTS")}{" "}
+                  <span className="text-blue-700 dark:text-blue-600">
+                    {t_projects("PROJECTS_TITLE_FEATURED")}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span className="text-blue-700 dark:text-blue-600">
+                    {t_projects("PROJECTS_TITLE_FEATURED")}{" "}
+                  </span>
+                  {t_projects("PROJECTS_TITLE_PROJECTS")}
+                </>
+              )}
+            </h2>
+
+            <p className="text-slate-600 dark:text-slate-400 mt-4 max-w-lg">
+              {t_projects("PROJECTS_DESCRIPTION")}
+            </p>
+          </div>
         </ScrollAnimator>
 
-        <div className="relative">
+        {/* CAROUSEL */}
+        <div className="relative space-y-6">
           {projectsData.length > 0 ? (
             <>
+              <ScrollAnimator
+                direction="up"
+                delay={0.2}
+              >
+                <div
+                  ref={carouselRef}
+                  className="flex overflow-hidden snap-x snap-mandatory scroll-smooth no-scrollbar py-8 -mx-4 px-4"
+                >
+                  {allProjects.map((project, index) => (
+                    <div
+                      key={project.id}
+                      className={`
+                            shrink-0 w-full md:w-1/2 lg:w-1/3
+                            snap-start scroll-ml-4 md:scroll-ml-6 lg:scroll-ml-8 xl:scroll-ml-10 px-2 md:px-3 lg:px-4
+                            transition-opacity duration-300
+                            ${
+                              index >= activeIndex &&
+                              index < activeIndex + itemsPerPage
+                                ? "opacity-100"
+                                : "opacity-50"
+                            }
+                        `}
+                      style={{ minHeight: "400px" }}
+                    >
+                      <ProjectCard project={project} />
+                    </div>
+                  ))}
+                </div>
+              </ScrollAnimator>
+
               {projectsData.length > itemsPerPage && (
                 <div className="flex w-full justify-center items-center space-x-4 mb-4">
                   <ScrollAnimator
@@ -83,7 +140,7 @@ const ProjectsSection = () => {
                       className={`p-3 cursor-pointer rounded-full bg-blue-600 hover:bg-blue-700 text-white transition disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed`}
                       aria-label="Proyecto anterior"
                     >
-                      <Icons.chevronLeft />
+                      <FaChevronLeft className="h-5 w-5" />
                     </button>
                   </ScrollAnimator>
                   <ScrollAnimator
@@ -97,47 +154,11 @@ const ProjectsSection = () => {
                       className={`p-3 cursor-pointer rounded-full bg-blue-600 hover:bg-blue-700 text-white transition disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed`}
                       aria-label="Siguiente proyecto"
                     >
-                      <Icons.chevronRight />
+                      <FaChevronRight className="h-5 w-5" />
                     </button>
                   </ScrollAnimator>
                 </div>
               )}
-
-              <ScrollAnimator
-                direction="up"
-                delay={0.2}
-              >
-                <div
-                  ref={carouselRef}
-                  className="flex overflow-hidden snap-x snap-mandatory scroll-smooth no-scrollbar py-6 -mx-4 px-4"
-                >
-                  {allProjects.map((project, index) => (
-                    <div
-                      key={project.id}
-                      className={`
-                            flex-shrink-0 w-full md:w-1/2 lg:w-1/3
-                            snap-start scroll-ml-4 md:scroll-ml-6 lg:scroll-ml-8 xl:scroll-ml-10 px-2 md:px-3 lg:px-4
-                            transition-opacity duration-300
-                            ${
-                              index >= activeIndex &&
-                              index < activeIndex + itemsPerPage
-                                ? "opacity-100"
-                                : "opacity-50"
-                            }
-                        `}
-                      style={{ minHeight: "400px" }}
-                    >
-                      <ProjectCarouselItem
-                        project={project}
-                        isActive={
-                          index >= activeIndex &&
-                          index < activeIndex + itemsPerPage
-                        }
-                      />
-                    </div>
-                  ))}
-                </div>
-              </ScrollAnimator>
             </>
           ) : (
             <ScrollAnimator
@@ -154,5 +175,69 @@ const ProjectsSection = () => {
     </>
   );
 };
+
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <div className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-900 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+      {/* IMAGE */}
+      <div className="relative h-60 w-full overflow-hidden">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm"
+        />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center gap-4">
+          {project.liveUrl ||
+            (project.repoUrl && (
+              <>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    className="p-4 rounded-full bg-white/10 hover:bg-blue-500 transition"
+                  >
+                    <FaExternalLinkAlt className="text-white w-5 h-5" />
+                  </a>
+                )}
+
+                {project.repoUrl && (
+                  <a
+                    href={project.repoUrl}
+                    target="_blank"
+                    className="p-4 rounded-full bg-white/10 hover:bg-blue-500 transition"
+                  >
+                    <FaGithub className="text-white w-5 h-5" />
+                  </a>
+                )}
+              </>
+            ))}
+        </div>
+      </div>
+
+      {/* CONTENT */}
+      <div className="p-6 space-y-4">
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs px-2 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <h3 className="text-xl font-semibold">{project.title}</h3>
+
+        <p className="text-slate-500 dark:text-slate-400 text-sm">
+          {project.description}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default ProjectsSection;

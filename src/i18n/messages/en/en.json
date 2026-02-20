@@ -3,8 +3,7 @@
         "home": "Home",
         "about": "About me",
         "projects": "Projects",
-        "experience": "Experience",
-        "education": "Education",
+        "services": "Services",
         "contact": "Contact",
         "info": "Info"
     },
@@ -25,6 +24,37 @@
         "PROFESSIONAL_FRONTEND_ARCHITECTURE": "Frontend Architecture",
         "PROFESSIONAL_BACKEND_API_DESIGN": "Backend and API Design",
         "PROFESSIONAL_DEVOPS_CLOUD": "DevOps and Cloud"
+    },
+    "service": {
+        "SERVICE_SERVICES": "Services",
+        "SERVICE_PREMIUM": "Premium",
+        "SERVICE_DESCRIPTION": "Integrative solutions designed to elevate your digital presence and optimize your technological processes.",
+
+        "SERVICE_WEB_DEVELOPMENT": "Web Development",
+        "SERVICE_WEB_DEVELOPMENT_DESCRIPTION": "Modern, ultra-fast and optimized for SEO using cutting-edge technologies.",
+        "SERVICE_FULL_STACK_APPS": "Full Stack Applications",
+        "SERVICE_FULL_STACK_APPS_DESCRIPTION": "Complex applications from end-to-end, scalable and secure for any sector.",
+        "SERVICE_API_INTEGRATION": "API Integration",
+        "SERVICE_API_INTEGRATION_DESCRIPTION": "Design and consume RESTful and GraphQL services with a focus on efficiency and security.",
+        "SERVICE_MAINTENANCE": "Maintenance",
+        "SERVICE_MAINTENANCE_DESCRIPTION": "Continuous support, updates and proactive monitoring to ensure stability.",
+        "SERVICE_DESINGN_UI_UX": "UI/UX Design",
+        "SERVICE_DESINGN_UI_UX_DESCRIPTION": "Design attractive and intuitive user experiences to maximize customer satisfaction.",
+        "SERVICE_TECHNOLOGY_CONSULTING": "Technology Consulting",
+        "SERVICE_TECHNOLOGY_CONSULTING_DESCRIPTION": "Expert advice to select the right technologies and design custom solutions for your business.",
+
+
+
+        "SERVICE_APP_DEVELOPMENT": "App Development",
+        "SERVICE_APP_DEVELOPMENT_DESCRIPTION": "Complex applications from end-to-end, scalable and secure for any sector.",
+        "SERVICE_DIGITAL_MARKETING": "Digital Marketing",
+        "SERVICE_DIGITAL_MARKETING_DESCRIPTION": "Effective marketing strategies to increase visibility on social media and attract potential customers.",
+        "SERVICE_SEO_OPTIMIZATION": "SEO Optimization",
+        "SERVICE_SEO_OPTIMIZATION_DESCRIPTION": "Visibility in search engines and content optimization to improve positioning in search results.",
+        "SERVICE_DEVOPS": "DevOps",
+        "SERVICE_DEVOPS_DESCRIPTION": "Process automation and continuous delivery to improve the quality and speed of your projects.",
+        "SERVICE_CLOUD_SERVICES": "Cloud Services",
+        "SERVICE_CLOUD_SERVICES_DESCRIPTION": "Scalable and cost-effective solutions for managing your services in the cloud."
     },
     "footer": {
         "copyright": "© {year} My Portfolio. All rights reserved.",
@@ -51,34 +81,29 @@
         "SPANISH": "Spanish"
     },
     "projects": {
-        "title": "My project list",
-        "description": "Here is a list of my most notable projects.",
+        "PROJECTS_TITLE_PROJECTS": "projects",
+        "PROJECTS_TITLE_FEATURED": "Featured",
+        "PROJECTS_DESCRIPTION": "A selection of recent work that demonstrates my ability to solve complex problems.",
         "no_projects": "No projects available at this time.",
         "view_site": "View site",
         "view_code": "View code"
     },
-    "experience": {
-        "title": "Experience",
-        "all_experience": "All my experience",
-        "description": "Here is a list of my work experience.",
-        "no_experience": "No experience available at this time."
-    },
-    "education": {
-        "title": "Education",
-        "all_education": "All my education",
-        "description": "Here is a list of my education.",
-        "no_education": "No education available at this time."
-    },
     "contact": {
-        "title": "Contact",
-        "description": "If you want to get in touch with me, do you have any questions or proposals? Please fill out the form below.",
-        "name": "Name",
-        "email": "Email",
-        "temporary_email": "Sorry, temporary emails are not allowed.",
-        "message": "Message",
-        "send": "Send message",
-        "sending": "Sending...",
-        "success": "Message sent successfully!, I will get back to you as soon as possible.",
-        "error": "Error sending message. Please try again."
+        "CONTACT_PRESENTATION": "Shall we talk about your next project?",
+        "CONTACT_DESCRIPTION": "I'm available for freelance collaborations or full-time opportunities in innovative environments.",
+        
+        "CONTACT_FORM_NAME": "Name",
+        "CONTACT_FORM_NAME_REQUIRED": "How can I call you?",
+        
+        "CONTACT_FORM_EMAIL": "Email",
+        "CONTACT_FORM_EMAIL_REQUIRED": "We need a valid email to respond to you. (e.g. john@example.com)",
+        "CONTACT_FORM_EMAIL_NOT_TEMPORARY": "To be able to respond to you, we need a personal or corporate email.",
+        
+        "CONTACT_FORM_MESSAGE": "Message",
+        "CONTACT_FORM_MESSAGE_PLACEHOLDER": "How can I help you?",
+        "CONTACT_FORM_MESSAGE_REQUIRED": "Write your message to continue.",
+        
+        "CONTACT_FORM_SEND": "Send",
+        "CONTACT_FORM_SENDING": "Sending..."
     }
 }
