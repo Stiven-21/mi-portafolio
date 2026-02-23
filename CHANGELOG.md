@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/Stiven-21/mi-portafolio/compare/v2.0.1...v2.0.2) (2026-02-23)
+
+
+### 🐛 Bug Fixes
+
+* corrección de error en el node.js.yml ([62dfd83](https://github.com/Stiven-21/mi-portafolio/commit/62dfd8367b6364ee700515c8a7f6c778d298ef24))
+
 ### [2.0.1](https://github.com/Stiven-21/mi-portafolio/compare/v2.0.0...v2.0.1) (2026-02-23)
 
 
