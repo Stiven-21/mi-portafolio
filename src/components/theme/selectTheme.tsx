@@ -1,88 +1,86 @@
 "use client";
-import useThemeMode from "@/hooks/useThemeMode";
-import { useEffect, useRef, useState, useTransition } from "react";
-import { themeOptions } from "@/interfaces/theme.interface";
+
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useTransition,
+  memo,
+} from "react";
 import ClickOutSide from "@/common/ClickOutSide/ClickOutSide";
-import { Translations } from "@/common/Translations/translations";
+import { themeOptions } from "@/data/theme.data";
+import { useTheme } from "@/provider/theme.provider";
+import { useAppTranslations } from "@/hooks/translations/useAppTranslations";
 
 const SelectTheme = () => {
-  const [theme, setTheme] = useThemeMode();
-  const [isMounted, setIsMounted] = useState(false);
+  const [theme, setTheme] = useTheme();
   const [isPending, startTransition] = useTransition();
   const [showDropdown, setShowDropdown] = useState(false);
   const [dropUp, setDropUp] = useState(false);
   const dropdownRef = useRef<HTMLUListElement>(null);
-  const { t_theme } = Translations();
-
-  const buttonClass =
-    "cursor-pointer rounded-lg px-4 py-2 w-full text-center truncate";
+  const { t_theme } = useAppTranslations();
 
   useEffect(() => {
-    if (showDropdown) {
-      setTimeout(() => {
-        const dropdown = dropdownRef.current;
-        if (dropdown) {
-          const rect = dropdown.getBoundingClientRect();
-          const spaceBelow = window.innerHeight - rect.bottom;
-          const spaceAbove = rect.top;
-          setDropUp(spaceBelow < 200 && spaceAbove > spaceBelow);
-        }
-      }, 0);
+    if (!showDropdown) return;
+
+    const dropdown = dropdownRef.current;
+    if (dropdown) {
+      const rect = dropdown.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      const spaceAbove = rect.top;
+      setDropUp(spaceBelow < 200 && spaceAbove > spaceBelow);
     }
   }, [showDropdown]);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  const handleChangeTheme = (tm: "light" | "dark" | "system") => {
-    if (isPending) return;
-    if (theme === tm) return;
-    startTransition(() => setTheme(tm));
-    setShowDropdown(false);
-  };
+  const handleChangeTheme = useCallback(
+    (tm: "light" | "dark" | "system") => {
+      if (isPending || theme === tm) return;
+      startTransition(() => setTheme(tm));
+      setShowDropdown(false);
+    },
+    [isPending, theme, setTheme],
+  );
 
   const selectedThemeOption =
     themeOptions.find((t) => t.value === theme) || themeOptions[0];
 
-  return !isMounted ? null : (
+  return (
     <ClickOutSide
       onclick={() => setShowDropdown(false)}
       className="relative"
     >
       <button
         onClick={() => setShowDropdown(!showDropdown)}
-        className={`${buttonClass} gap-x-2 flex items-center justify-between bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50`}
+        className="flex items-center justify-between cursor-pointer w-full px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-950 dark:hover:bg-slate-800 text-slate-950 dark:text-slate-50"
       >
-        <span className="flex items-center">{selectedThemeOption?.icon}</span>
+        <span className="flex items-center">
+          {<selectedThemeOption.icon className="w-6 h-6" />}
+        </span>
       </button>
 
       <ul
         ref={dropdownRef}
-        className={`w-30 left-0 right-auto md:left-auto md:right-0 duration-300 ease-linear shadow-md absolute z-10 bg-slate-50 dark:bg-gray-800 mt-2 overflow-hidden rounded-sm
-          ${
-            showDropdown
-              ? "max-h-60 border border-gray-300 dark:border-gray-700"
-              : "max-h-0 border-0 border-gray-300/0 dark:border-gray-700/0"
-          }
-          ${dropUp ? "bottom-full mb-2" : "top-full mt-2"}
-        `}
+        className={`absolute z-10 w-30 right-0 overflow-hidden rounded-sm bg-slate-50 dark:bg-gray-800 shadow-md duration-300 ease-linear ${
+          dropUp ? "bottom-full mb-2" : "top-full mt-2"
+        } ${
+          showDropdown
+            ? "max-h-60 border border-gray-300 dark:border-gray-700"
+            : "max-h-0 border-0"
+        }`}
       >
         {themeOptions.map((t) => (
           <li key={t.value}>
             <button
               onClick={() => handleChangeTheme(t.value)}
-              className={`w-full cursor-pointer text-left px-4 py-2 flex items-center gap-3 hover:bg-gray-200 dark:hover:bg-gray-700 
-                ${
-                  t.value === theme
-                    ? "text-sky-500"
-                    : "text-slate-950 dark:text-slate-50"
-                }`}
+              className={`w-full cursor-pointer px-4 py-2 flex items-center gap-3 text-left hover:bg-gray-200 dark:hover:bg-gray-700 ${
+                t.value === theme
+                  ? "text-sky-500"
+                  : "text-slate-950 dark:text-slate-50"
+              }`}
             >
-              <span className="flex items-center gap-x-2">
-                {t.icon}
-                {t_theme(t.value)}
-              </span>
+              {<t.icon className="w-5 h-5" />}
+              {t_theme(t.value.toUpperCase())}
             </button>
           </li>
         ))}
@@ -91,4 +89,4 @@ const SelectTheme = () => {
   );
 };
 
-export default SelectTheme;
+export default memo(SelectTheme);

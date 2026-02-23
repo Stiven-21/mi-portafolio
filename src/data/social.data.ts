@@ -1,19 +1,20 @@
-import { Social } from "@/components/icons";
+import { Social } from "@/interfaces/social.interface";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
-export const socialLinks = [
+export const socialLinks: Social[] = [
   {
     name: "Instagram",
     url: "https://www.instagram.com/stiveen1821",
-    icon: Social.instagram,
+    Icon: FaInstagram,
   },
   {
     name: "GitHub",
     url: "https://github.com/Stiven-21",
-    icon: Social.github,
+    Icon: FaGithub,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/james-cordoba-a93437272",
-    icon: Social.linkedin,
+    Icon: FaLinkedin,
   },
 ];

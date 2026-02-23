@@ -1,0 +1,154 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About me",
+        "projects": "Projects",
+        "services": "Services",
+        "contact": "Contact",
+        "info": "Info"
+    },
+    "index": {
+        "HERO_AVAILABLE": "AVAILABLE FOR PROJECTS",
+        "HERO_DEVELOPER": "Developer",
+        "FULL_STACK": "Full Stack",
+        "HERO_CREATING": "creating",
+        "HERO_EXPERIENCE": "experiences",
+        "HERO_DIGITAL": "digital",
+        "HERO_DESCRIPTION": "Specialist in robust and scalable solutions with a focus on premium design, immersive interfaces, and technological excellence."
+    },
+    "professional": {
+        "PROFESSIONAL_CAREER": "Career",
+        "PROFESSIONAL_PROFESSIONAL": "Professional",
+        "PROFESSIONAL_EXPERIENCE": "Experience transforming ideas into code. My focus combines solid technical architecture with modern aesthetic sensitivity.",
+        "PROFESSIONAL_TECHNICAL_SKILLS": "Technical skills",
+        "PROFESSIONAL_FRONTEND_ARCHITECTURE": "Frontend Architecture",
+        "PROFESSIONAL_BACKEND_API_DESIGN": "Backend and API Design",
+        "PROFESSIONAL_DEVOPS_CLOUD": "DevOps and Cloud"
+    },
+    "service": {
+        "SERVICE_SERVICES": "Services",
+        "SERVICE_PREMIUM": "Premium",
+        "SERVICE_DESCRIPTION": "Integrative solutions designed to elevate your digital presence and optimize your technological processes.",
+
+        "SERVICE_WEB_DEVELOPMENT": "Web Development",
+        "SERVICE_WEB_DEVELOPMENT_DESCRIPTION": "Modern, ultra-fast and optimized for SEO using cutting-edge technologies.",
+        "SERVICE_FULL_STACK_APPS": "Full Stack Applications",
+        "SERVICE_FULL_STACK_APPS_DESCRIPTION": "Complex applications from end-to-end, scalable and secure for any sector.",
+        "SERVICE_API_INTEGRATION": "API Integration",
+        "SERVICE_API_INTEGRATION_DESCRIPTION": "Design and consume RESTful and GraphQL services with a focus on efficiency and security.",
+        "SERVICE_MAINTENANCE": "Maintenance",
+        "SERVICE_MAINTENANCE_DESCRIPTION": "Continuous support, updates and proactive monitoring to ensure stability.",
+        "SERVICE_DESINGN_UI_UX": "UI/UX Design",
+        "SERVICE_DESINGN_UI_UX_DESCRIPTION": "Design attractive and intuitive user experiences to maximize customer satisfaction.",
+        "SERVICE_TECHNOLOGY_CONSULTING": "Technology Consulting",
+        "SERVICE_TECHNOLOGY_CONSULTING_DESCRIPTION": "Expert advice to select the right technologies and design custom solutions for your business.",
+
+
+
+        "SERVICE_APP_DEVELOPMENT": "App Development",
+        "SERVICE_APP_DEVELOPMENT_DESCRIPTION": "Complex applications from end-to-end, scalable and secure for any sector.",
+        "SERVICE_DIGITAL_MARKETING": "Digital Marketing",
+        "SERVICE_DIGITAL_MARKETING_DESCRIPTION": "Effective marketing strategies to increase visibility on social media and attract potential customers.",
+        "SERVICE_SEO_OPTIMIZATION": "SEO Optimization",
+        "SERVICE_SEO_OPTIMIZATION_DESCRIPTION": "Visibility in search engines and content optimization to improve positioning in search results.",
+        "SERVICE_DEVOPS": "DevOps",
+        "SERVICE_DEVOPS_DESCRIPTION": "Process automation and continuous delivery to improve the quality and speed of your projects.",
+        "SERVICE_CLOUD_SERVICES": "Cloud Services",
+        "SERVICE_CLOUD_SERVICES_DESCRIPTION": "Scalable and cost-effective solutions for managing your services in the cloud."
+    },
+    "footer": {
+        "TERMS": "Terms",
+        "PRIVACY": "Privacy",
+        "COOKIES": "Cookies"
+    },
+    "common": {
+        "my_portfolio": "JamDev",
+        "view_more": "View more",
+        "complete_fields": "Please complete all fields.",
+        "error_network": "A network error occurred. Please try again.",
+        "in_process": "In process",
+        "coming_soon": "Coming soon",
+        "my_skills": "My skills",
+        "current": "Current"
+    },
+    "theme": {
+        "LIGHT": "Light",
+        "DARK": "Dark",
+        "SYSTEM": "System"
+    },
+    "language": {
+        "ENGLISH": "English",
+        "SPANISH": "Spanish"
+    },
+    "projects": {
+        "PROJECTS_TITLE_PROJECTS": "projects",
+        "PROJECTS_TITLE_FEATURED": "Featured",
+        "PROJECTS_DESCRIPTION": "A selection of recent work that demonstrates my ability to solve complex problems.",
+        "no_projects": "No projects available at this time."
+    },
+    "contact": {
+        "CONTACT_PRESENTATION": "Shall we talk about your next project?",
+        "CONTACT_DESCRIPTION": "I'm available for freelance collaborations or full-time opportunities in innovative environments.",
+        
+        "CONTACT_FORM_NAME": "Name",
+        "CONTACT_FORM_NAME_REQUIRED": "How can I call you?",
+        
+        "CONTACT_FORM_EMAIL": "Email",
+        "CONTACT_FORM_EMAIL_REQUIRED": "We need a valid email to respond to you. (e.g. john@example.com)",
+        "CONTACT_FORM_EMAIL_NOT_TEMPORARY": "To be able to respond to you, we need a personal or corporate email.",
+        
+        "CONTACT_FORM_MESSAGE": "Message",
+        "CONTACT_FORM_MESSAGE_PLACEHOLDER": "How can I help you?",
+        "CONTACT_FORM_MESSAGE_REQUIRED": "Write your message to continue.",
+        
+        "CONTACT_FORM_SEND": "Send",
+        "CONTACT_FORM_SENDING": "Sending..."
+    },
+    "cookie": {
+        "COOKIE_BANNER_DESCRIPTION": "We use cookies to improve your experience and analyze traffic through Google Analytics. You can accept or reject analytics cookies.",
+        "COOKIE_BANNER_ACCEPT": "Accept",
+        "COOKIE_BANNER_DECLINE": "Decline",
+
+        "COOKIE_TITLE": "Cookie Policy",
+        "COOKIE_DESCRIPTION": "This website uses its own and third-party cookies to improve the user experience and analyze traffic.",
+        "COOKIE_ONE_ITEM": "1. First-party cookies",
+        "COOKIE_ONE_ITEM_DESCRIPTION": "Technical cookies are used to store:",
+        "COOKIE_ONE_ITEM_LANGUAGE_PREFERENCE": "language preference",
+        "COOKIE_ONE_ITEM_THEME_PREFERENCE": "theme preference (light/dark/system)",
+        "COOKIE_ONE_ITEM_DESCRIPTION_2": "These cookies are necessary for the proper functioning of the website.",
+        "COOKIE_TWO_ITEM": "2. Third-party cookies",
+        "COOKIE_TWO_ITEM_DESCRIPTION": "This website uses Google Analytics, a service provided by Google LLC, which installs cookies to collect anonymous information about website usage (number of visits, pages viewed, approximate location).",
+        "COOKIE_TWO_ITEM_GOOGLE_ANALYTICS": "You can find more information in Google's privacy policy.",
+        "COOKIE_THREE_ITEM": "3. Disabling cookies",
+        "COOKIE_THREE_ITEM_DESCRIPTION": "You can configure your browser to reject cookies or delete existing cookies. Please note that this may affect the website's functionality."
+    },
+    "terms": {
+        "TERMS_TITLE": "Terms and Conditions",
+        "TERMS_DESCRIPTION": "This website has informative and professional character and shows professional projects and services.",
+        "TERMS_ONE_ITEM": "1. Use of the site",
+        "TERMS_ONE_ITEM_DESCRIPTION": "The user commits to use the site in a lawful and respectful manner.",
+        "TERMS_TWO_ITEM": "2. Intellectual property",
+        "TERMS_TWO_ITEM_DESCRIPTION": "All the content of the site, including text, images and code, is the property of JamDev and is protected by intellectual property laws.",
+        "TERMS_THREE_ITEM": "3. Limitation of liability",
+        "TERMS_THREE_ITEM_DESCRIPTION": "JamDev is not liable for damages resulting from the use of the site or the information provided."
+    },
+    "privacy": {
+        "PRIVACY_TITLE": "Privacy Policy",
+        "PRIVACY_ONE_ITEM": "1. Data Controller",
+        "PRIVACY_ONE_ITEM_DESCRIPTION": "The data controller is JamDev, with the following contact email: ",
+        "PRIVACY_TWO_ITEM": "2. Data Collected",
+        "PRIVACY_TWO_ITEM_DESCRIPTION": "The following data is collected through the contact form:",
+        "PRIVACY_TWO_ITEM_NAME": "Name",
+        "PRIVACY_TWO_ITEM_EMAIL": "Email address",
+        "PRIVACY_TWO_ITEM_MESSAGE": "Message sent",
+        "PRIVACY_THREE_ITEM": "3. Purpose of Data Processing",
+        "PRIVACY_THREE_ITEM_DESCRIPTION": "The collected data is used to respond to user inquiries and improve the website experience.",
+        "PRIVACY_FOUR_ITEM": "4. Web Analytics",
+        "PRIVACY_FOUR_ITEM_DESCRIPTION": "This website uses Google Analytics, a web analytics service provided by Google LLC, which allows analysis of website usage and provides statistics on visits, approximate location, and browsing behavior.",
+        "PRIVACY_FOUR_ITEM_ANALYTICS": "Google may use cookies to collect this information.",
+        "PRIVACY_FIVE_ITEM": "5. Data Retention",
+        "PRIVACY_FIVE_ITEM_DESCRIPTION": "Data submitted through the form will be retained only for the time necessary to handle the inquiry.",
+        "PRIVACY_SIX_ITEM": "6. User Rights",
+        "PRIVACY_SIX_ITEM_DESCRIPTION": "The user may request access to, correction, or deletion of their data by sending an email to "
+    }
+}

@@ -1,0 +1,154 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "about": "Sobre mi",
+        "projects": "Proyectos",
+        "services": "Servicios",
+        "contact": "Contacto",
+        "info": "Información"
+    },
+    "index": {
+        "HERO_AVAILABLE": "DISPONIBLE PARA PROYECTOS",
+        "HERO_DEVELOPER": "Desarrollador",
+        "FULL_STACK": "Full Stack",
+        "HERO_CREATING": "creando",
+        "HERO_EXPERIENCE": "experiencias",
+        "HERO_DIGITAL": "digitales",
+        "HERO_DESCRIPTION": "Especialista en soluciones robustas y escalables con un enfoque en diseño premium, interfaces inmersivas y alto rendimiento tecnológico."
+    },
+    "professional": {
+        "PROFESSIONAL_CAREER": "Trayectoria",
+        "PROFESSIONAL_PROFESSIONAL": "Profesional",
+        "PROFESSIONAL_EXPERIENCE": "Experiencia transformando ideas en código. Mi enfoque combina la arquitectura técnica sólida con una sensibilidad estética moderna.",
+        "PROFESSIONAL_TECHNICAL_SKILLS": "Habilidades tecnicas",
+        "PROFESSIONAL_FRONTEND_ARCHITECTURE": "Arquitectura Frontend",
+        "PROFESSIONAL_BACKEND_API_DESIGN": " Diseño de Backend y API",
+        "PROFESSIONAL_DEVOPS_CLOUD": "DevOps y Cloud"
+    },
+    "service": {
+        "SERVICE_SERVICES": "Servicios",
+        "SERVICE_PREMIUM": "Premium",
+        "SERVICE_DESCRIPTION": "Soluciones integrales diseñadas para elevar tu presencia digital y optimizar tus procesos tecnológicos.",
+        
+        "SERVICE_WEB_DEVELOPMENT": "Desarrollo Web",
+        "SERVICE_WEB_DEVELOPMENT_DESCRIPTION": "Interfaces modernas, ultra rápidas y optimizadas para SEO utilizando tecnologías de vanguardia.",
+        "SERVICE_FULL_STACK_APPS": "Aplicaciones Full Stack",
+        "SERVICE_FULL_STACK_APPS_DESCRIPTION": "Aplicaciones complejas de extremo a extremo, escalables y seguras para cualquier sector.",
+        "SERVICE_API_INTEGRATION": "Integración de APIs",
+        "SERVICE_API_INTEGRATION_DESCRIPTION": "Diseño y consumo de servicios RESTful y GraphQL con foco en eficiencia y seguridad.",
+        "SERVICE_MAINTENANCE": "Mantenimiento",
+        "SERVICE_MAINTENANCE_DESCRIPTION": "Soporte continuo, actualizaciones y monitoreo proactivo para garantizar estabilidad.",
+        "SERVICE_DESINGN_UI_UX": "Diseño UI/UX",
+        "SERVICE_DESINGN_UI_UX_DESCRIPTION": "Diseño de interfaces atractivas y experiencias de usuario intuitivas para maximizar la satisfacción del cliente.",
+        "SERVICE_TECHNOLOGY_CONSULTING": "Consultoria Tecnológica",
+        "SERVICE_TECHNOLOGY_CONSULTING_DESCRIPTION": "Asesoramiento experto para seleccionar las tecnologías adecuadas y diseñar soluciones a medida para tu negocio.",
+        
+        
+        
+        "SERVICE_APP_DEVELOPMENT": "Desarrollo de Aplicaciones",
+        "SERVICE_APP_DEVELOPMENT_DESCRIPTION": "Aplicaciones complejas de extremo a extremo, escalables y seguras para cualquier sector.",
+        "SERVICE_DIGITAL_MARKETING": "Marketing Digital",
+        "SERVICE_DIGITAL_MARKETING_DESCRIPTION": "Estrategias de marketing eficaces para aumentar tu visibilidad en redes sociales y captar clientes potenciales.",
+        "SERVICE_SEO_OPTIMIZATION": "Optimización SEO",
+        "SERVICE_SEO_OPTIMIZATION_DESCRIPTION": "Mejora de la visibilidad en buscadores y optimización de contenido para mejorar la posicionamiento en los resultados de búsqueda.",
+        "SERVICE_DEVOPS": "DevOps",
+        "SERVICE_DEVOPS_DESCRIPTION": "Automatización de procesos y entrega continua para mejorar la calidad y velocidad de tus proyectos.",
+        "SERVICE_CLOUD_SERVICES": "Servicios en la Nube",
+        "SERVICE_CLOUD_SERVICES_DESCRIPTION": "Soluciones escalables y costos eficientes para la gestión de tus servicios en la nube."
+    },
+    "footer": {
+        "TERMS": "Términos",
+        "PRIVACY": "Privacidad",
+        "COOKIES": "Cookies"
+    },
+    "common": {
+        "my_portfolio": "JamDev",
+        "view_more": "Ver más",
+        "complete_fields": "Por favor, complete todos los campos.",
+        "error_network": "Ocurrió un error de red. Inténtalo de nuevo.",
+        "in_process": "En proceso",
+        "coming_soon": "Próximamente",
+        "my_skills": "Mis habilidades",
+        "current": "Actualmente"
+    },
+    "theme": {
+        "LIGHT": "Claro",
+        "DARK": "Oscuro",
+        "SYSTEM": "Sistema"
+    },
+    "language": {
+        "ENGLISH": "Inglés",
+        "SPANISH": "Español"
+    },
+    "projects": {
+        "PROJECTS_TITLE_PROJECTS": "Proyectos",
+        "PROJECTS_TITLE_FEATURED": "destacados",
+        "PROJECTS_DESCRIPTION": "Una selección de trabajos recientes que demuestran mi capacidad para resolver problemas complejos.",
+        "no_projects": "No hay proyectos disponibles en este momento."
+    },
+    "contact": {
+        "CONTACT_PRESENTATION": "¿Hablamos sobre tu próximo proyecto?",
+        "CONTACT_DESCRIPTION": "Estoy disponible para colaboraciones freelance o propuestas de tiempo completo en entornos innovadores.",
+        
+        "CONTACT_FORM_NAME": "Nombre",
+        "CONTACT_FORM_NAME_REQUIRED": "¿Cómo te gustaría que te llamemos?",
+
+        "CONTACT_FORM_EMAIL": "Correo electrónica",
+        "CONTACT_FORM_EMAIL_REQUIRED": "Necesitamos un correo válido para responderte. (e.g. john@example.com)",
+        "CONTACT_FORM_EMAIL_NOT_TEMPORARY": "Para poder responderte, necesitamos un correo personal o corporativo.",
+
+        "CONTACT_FORM_MESSAGE": "Mensaje",
+        "CONTACT_FORM_MESSAGE_PLACEHOLDER": "¿Cómo puedo ayudarte?",
+        "CONTACT_FORM_MESSAGE_REQUIRED": "Escribe tu mensaje para continuar.",
+
+        "CONTACT_FORM_SEND": "Enviar",
+        "CONTACT_FORM_SENDING": "Enviando..."
+    },
+    "cookie": {
+        "COOKIE_BANNER_DESCRIPTION": "Utilizamos cookies para mejorar tu experiencia y analizar el tráfico mediante Google Analytics. Puedes aceptar o rechazar las cookies analíticas.",
+        "COOKIE_BANNER_ACCEPT": "Aceptar",
+        "COOKIE_BANNER_DECLINE": "Rechazar",
+
+        "COOKIE_TITLE": "Política de Cookies",
+        "COOKIE_DESCRIPTION": "El presente sitio web utiliza cookies propias y de terceros para mejorar la experiencia del usuario y analizar el tráfico.",
+        "COOKIE_ONE_ITEM": "1. Cookies propias",
+        "COOKIE_ONE_ITEM_DESCRIPTION": "Se utilizan cookies técnicas para guardar:",
+        "COOKIE_ONE_ITEM_LANGUAGE_PREFERENCE": "preferencia de idioma",
+        "COOKIE_ONE_ITEM_THEME_PREFERENCE": "preferencia de tema (claro/oscuro/sistema)",
+        "COOKIE_ONE_ITEM_DESCRIPTION_2": "Estas cookies son necesarias para el funcionamiento correcto del sitio.",
+        "COOKIE_TWO_ITEM": "2. Cookies de terceros",
+        "COOKIE_TWO_ITEM_DESCRIPTION": "Este sitio utiliza Google Analytics, un servicio de Google LLC, que instala cookies para recopilar información anónima sobre el uso del sitio (número de visitas, páginas vistas, ubicación aproximada).",
+        "COOKIE_TWO_ITEM_GOOGLE_ANALYTICS": "Puedes consultar más información en la política de privacidad de Google.",
+        "COOKIE_THREE_ITEM": "3. Desactivación de cookies",
+        "COOKIE_THREE_ITEM_DESCRIPTION": "Puedes configurar tu navegador para rechazar las cookies o eliminar las cookies existentes. Ten en cuenta que esto puede afectar el funcionamiento del sitio."
+    },
+    "terms": {
+        "TERMS_TITLE": "Términos y Condiciones",
+        "TERMS_DESCRIPTION": "El presente sitio web tiene carácter informativo y muestra proyectos y servicios profesionales.",
+        "TERMS_ONE_ITEM": "1. Uso del sitio",
+        "TERMS_ONE_ITEM_DESCRIPTION": "El usuario se compromete a utilizar el sitio de forma lícita y respetuosa.",
+        "TERMS_TWO_ITEM": "2. Propiedad intelectual",
+        "TERMS_TWO_ITEM_DESCRIPTION": "Todo el contenido del sitio, incluyendo textos, imágenes y código, es propiedad de JamDev y está protegido por leyes de propiedad intelectual.",
+        "TERMS_THREE_ITEM": "3. Limitación de responsabilidad",
+        "TERMS_THREE_ITEM_DESCRIPTION": "JamDev no se hace responsable de daños derivados del uso del sitio o de la información proporcionada."
+    },
+    "privacy": {
+        "PRIVACY_TITLE": "Política de Privacidad",
+        "PRIVACY_ONE_ITEM": "1. Responsable",
+        "PRIVACY_ONE_ITEM_DESCRIPTION": "El responsable del tratamiento de los datos es JamDev, con correo de contacto: ",
+        "PRIVACY_TWO_ITEM": "2. Datos recopilados",
+        "PRIVACY_TWO_ITEM_DESCRIPTION": "A través del formulario de contacto se recopilan los siguientes datos:",
+        "PRIVACY_TWO_ITEM_NAME": "Nombre",
+        "PRIVACY_TWO_ITEM_EMAIL": "Correo electrónica",
+        "PRIVACY_TWO_ITEM_MESSAGE": "Mensaje enviado",
+        "PRIVACY_THREE_ITEM": "3. Finalidad del tratamiento de los datos",
+        "PRIVACY_THREE_ITEM_DESCRIPTION": "Los datos recopilados se utilizan para responder a las consultas de los usuarios y mejorar la experiencia del sitio web.",
+        "PRIVACY_FOUR_ITEM": "4. Analitica web",
+        "PRIVACY_FOUR_ITEM_DESCRIPTION": "Este sitio utiliza Google Analytics, un servicio de analítica web proporcionado por Google LLC, que permite analizar el uso del sitio web y obtener estadísticas sobre visitas, ubicación aproximada y comportamiento de navegación.",
+        "PRIVACY_FOUR_ITEM_ANALYTICS": "Google puede utilizar cookies para recopilar esta información.",
+        "PRIVACY_FIVE_ITEM": "5. Conservación de los datos",
+        "PRIVACY_FIVE_ITEM_DESCRIPTION": "Los datos enviados mediante el formulario se conservarán únicamente el tiempo necesario para gestionar la consulta.",
+        "PRIVACY_SIX_ITEM": "6. Derechos del usuario",
+        "PRIVACY_SIX_ITEM_DESCRIPTION": "El usuario puede solicitar el acceso, rectificación o eliminación de sus datos enviando un correo a "
+    }
+}
