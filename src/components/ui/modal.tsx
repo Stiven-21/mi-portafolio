@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Icons } from "../icons";
 import ScrollAnimator from "@/utils/ScrollAnimator";
+import { IoClose } from "react-icons/io5";
 
 interface ModalProps {
   isOpen: boolean;
@@ -57,7 +57,7 @@ const Modal = ({ isOpen, onClose, children, title }: ModalProps) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-70 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
           variants={backdropVariants}
           initial="hidden"
           animate="visible"
@@ -89,7 +89,7 @@ const Modal = ({ isOpen, onClose, children, title }: ModalProps) => {
                 className="text-slate-400 dark:text-slate-600 hover:text-slate-500 cursor-pointer outline-none transition"
                 aria-label="Cerrar modal"
               >
-                <Icons.x className="h-6 w-6" />
+                <IoClose className="h-6 w-6" />
               </button>
             </div>
 

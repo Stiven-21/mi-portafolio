@@ -3,49 +3,49 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: [
+    remotePatterns: [
       // LinkedIn
-      "media.licdn.com",
+      { protocol: "https", hostname: "media.licdn.com" },
 
       // Facebook / Meta
-      "scontent.xx.fbcdn.net",
-      "graph.facebook.com",
-      "platform-lookaside.fbsbx.com",
+      { protocol: "https", hostname: "scontent.xx.fbcdn.net" },
+      { protocol: "https", hostname: "graph.facebook.com" },
+      { protocol: "https", hostname: "platform-lookaside.fbsbx.com" },
 
       // Instagram (Meta)
-      "instagram.com",
-      "cdninstagram.com",
-      "scontent.cdninstagram.com",
+      { protocol: "https", hostname: "instagram.com" },
+      { protocol: "https", hostname: "cdninstagram.com" },
+      { protocol: "https", hostname: "scontent.cdninstagram.com" },
 
-      // Google Drive / Google User Content
-      "lh3.googleusercontent.com",
-      "drive.google.com",
+      // Google
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
+      { protocol: "https", hostname: "drive.google.com" },
 
       // GitHub
-      "avatars.githubusercontent.com",
-      "raw.githubusercontent.com",
+      { protocol: "https", hostname: "avatars.githubusercontent.com" },
+      { protocol: "https", hostname: "raw.githubusercontent.com" },
 
       // Pinterest
-      "i.pinimg.com",
+      { protocol: "https", hostname: "i.pinimg.com" },
 
       // Twitter / X
-      "pbs.twimg.com",
-      "abs.twimg.com",
+      { protocol: "https", hostname: "pbs.twimg.com" },
+      { protocol: "https", hostname: "abs.twimg.com" },
 
       // Discord
-      "cdn.discordapp.com",
-      "media.discordapp.net",
+      { protocol: "https", hostname: "cdn.discordapp.com" },
+      { protocol: "https", hostname: "media.discordapp.net" },
 
       // Reddit
-      "preview.redd.it",
-      "i.redd.it",
+      { protocol: "https", hostname: "preview.redd.it" },
+      { protocol: "https", hostname: "i.redd.it" },
 
       // Gravatar
-      "secure.gravatar.com",
+      { protocol: "https", hostname: "secure.gravatar.com" },
 
-      // Unsplash / Pexels (muy comunes)
-      "images.unsplash.com",
-      "images.pexels.com",
+      // Unsplash / Pexels
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "images.pexels.com" },
     ],
   },
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Icons } from "../icons";
+import { IoClose } from "react-icons/io5";
 
 interface NotificationBannerProps {
   message: string;
@@ -54,13 +54,13 @@ const NotificationBanner = ({
         >
           <div className="p-4 flex items-center justify-between">
             <div className="ml-3 text-md font-medium">{message}</div>
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <button
                 className="ml-2 cursor-pointer outline-none flex items-center justify-center rounded-md text-gray-300 hover:text-white  transition"
                 onClick={handleClose}
               >
                 <span className="sr-only">Cerrar</span>
-                <Icons.x
+                <IoClose
                   className="h-5 w-5"
                   aria-hidden="true"
                 />
