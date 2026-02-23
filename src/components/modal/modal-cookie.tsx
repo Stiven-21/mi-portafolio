@@ -1,7 +1,9 @@
 import { useAppTranslations } from "@/hooks/translations/useAppTranslations";
+import { useLanguage } from "@/provider/language.provider";
 
 export default function ModalCookie() {
   const { t_cookie } = useAppTranslations();
+  const [language] = useLanguage();
   return (
     <main className="max-w-4xl mx-auto py-6 px-6  space-y-10">
       <h1 className="text-4xl font-bold text-black dark:text-white">
@@ -32,7 +34,7 @@ export default function ModalCookie() {
         <p>
           <a
             className="text-blue-600 dark:text-blue-500 hover:text.blue-700 hover:dark:text-blue-600"
-            href="https://policies.google.com/technologies/cookie?hl=es"
+            href={`https://policies.google.com/technologies/cookies?hl=${language || "en"}`}
             target="_blank"
             rel="noreferrer"
           >
