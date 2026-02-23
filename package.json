@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "standard-version"
   },
   "dependencies": {
@@ -32,12 +32,13 @@
     "@commitlint/cli": "^20.4.1",
     "@commitlint/config-conventional": "^20.4.1",
     "@eslint/eslintrc": "^3",
+    "@swc/helpers": "^0.5.19",
     "@tailwindcss/postcss": "^4",
     "@types/node": "22.14.1",
     "@types/react": "^19",
-    "eslint": "^9.39.3",
     "@types/react-dom": "^19.2.3",
     "@types/react-world-flags": "^1.6.0",
+    "eslint": "^9.39.3",
     "eslint-config-next": "^15.3.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
