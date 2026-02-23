@@ -12,6 +12,8 @@ export const useAppTranslations = () => {
   const t_cookie = useTranslations("cookie");
   const t_footer = useTranslations("footer");
   const t_common = useTranslations("common");
+  const t_terms = useTranslations("terms");
+  const t_privacy = useTranslations("privacy");
 
   return {
     t_index,
@@ -25,5 +27,7 @@ export const useAppTranslations = () => {
     t_cookie,
     t_footer,
     t_common,
+    t_terms,
+    t_privacy,
   };
 };

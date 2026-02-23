@@ -25,6 +25,8 @@ export default function ContactSection() {
   } = useForm<ContactForm>({ mode: "onSubmit" });
 
   const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORM_SPREE_ENDPOINT!;
+  const professionalEmail = process.env.NEXT_PUBLIC_PROFESSIONAL_EMAIL;
+  const professionalAddress = process.env.NEXT_PUBLIC_PROFESSIONAL_ADDRESS;
 
   const submitHandler = useCallback(
     async (data: ContactForm) => {
@@ -105,14 +107,14 @@ export default function ContactSection() {
                   <div className="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
                     <MdEmail className="w-5 h-5" />
                   </div>
-                  <span>ing.jamescordoba@gmail.com</span>
+                  <span>{professionalEmail || "N/A"}</span>
                 </div>
 
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
                     <PiMapPinFill className="w-5 h-5" />
                   </div>
-                  <span>Mocoa, Colombia</span>
+                  <span>{professionalAddress || "N/A"}</span>
                 </div>
 
                 <div className="flex gap-4 pt-4">

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/navbar/navbar";
-import { Footer } from "@/components/footer/footer";
+import { Navbar } from "@/components/layout/navbar/navbar";
+import { Footer } from "@/components/layout/footer/footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import ThemeProvider from "@/provider/theme.provider";
@@ -12,6 +12,7 @@ import { Language } from "@/lib/server/language";
 import { NotificationProvider } from "@/components/notifications/core/NotificationContext";
 import { ToastContainer } from "@/components/notifications/ui/ToastContainer";
 import CookieBanner from "@/components/cookies/CookieBanner";
+import { LandingProvider } from "@/provider/landing.provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,21 +77,23 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-slate-950 dark:text-white from-slate-50 to-slate-100 0 bg-radial dark:from-slate-900 from-20% dark:to-slate-950 transition-colors flex flex-col min-h-screen overflow-auto `}
       >
-        <NotificationProvider>
-          <ThemeProvider initialTheme={theme}>
-            <LanguageProvider initialLanguage={locale as Language}>
-              <NextIntlClientProvider>
-                <main className="grow">
-                  <Navbar />
-                  {children}
-                </main>
-                <Footer />
-                <CookieBanner />
-                <ToastContainer />
-              </NextIntlClientProvider>
-            </LanguageProvider>
-          </ThemeProvider>
-        </NotificationProvider>
+        <LandingProvider>
+          <NotificationProvider>
+            <ThemeProvider initialTheme={theme}>
+              <LanguageProvider initialLanguage={locale as Language}>
+                <NextIntlClientProvider>
+                  <main className="grow">
+                    <Navbar />
+                    {children}
+                  </main>
+                  <Footer />
+                  <CookieBanner />
+                  <ToastContainer />
+                </NextIntlClientProvider>
+              </LanguageProvider>
+            </ThemeProvider>
+          </NotificationProvider>
+        </LandingProvider>
       </body>
     </html>
   );

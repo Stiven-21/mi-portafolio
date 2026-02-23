@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import SelectTheme from "../theme/selectTheme";
+import SelectTheme from "../../theme/selectTheme";
 import SmallScreen from "./smallScreen";
 import { sections } from "@/data/navbar.interface";
 import SelectLanguage from "@/components/language/selectLanguage";
@@ -112,12 +112,12 @@ export const Navbar = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-x-2 text-xl font-bold italic text-gray-950 dark:text-white hover:text-blue-700 dark:hover:text-blue-600"
+            className="items-center flex gap-x-2 text-xl font-bold italic text-gray-950 dark:text-white hover:text-blue-700 dark:hover:text-blue-600"
           >
             <span className="p-2 bg-blue-600 rounded-xl text-white">
               <HiMiniCommandLine className="h-5 w-5" />
             </span>
-            {t_common("my_portfolio")}
+            <span className="hidden md:block">{t_common("my_portfolio")}</span>
           </Link>
 
           <div className="flex items-center space-x-2 md:space-x-4">

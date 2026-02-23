@@ -107,6 +107,48 @@
     "cookie": {
         "COOKIE_BANNER_DESCRIPTION": "We use cookies to improve your experience and analyze traffic through Google Analytics. You can accept or reject analytics cookies.",
         "COOKIE_BANNER_ACCEPT": "Accept",
-        "COOKIE_BANNER_DECLINE": "Decline"
+        "COOKIE_BANNER_DECLINE": "Decline",
+
+        "COOKIE_TITLE": "Cookie Policy",
+        "COOKIE_DESCRIPTION": "This website uses its own and third-party cookies to improve the user experience and analyze traffic.",
+        "COOKIE_ONE_ITEM": "1. First-party cookies",
+        "COOKIE_ONE_ITEM_DESCRIPTION": "Technical cookies are used to store:",
+        "COOKIE_ONE_ITEM_LANGUAGE_PREFERENCE": "language preference",
+        "COOKIE_ONE_ITEM_THEME_PREFERENCE": "theme preference (light/dark/system)",
+        "COOKIE_ONE_ITEM_DESCRIPTION_2": "These cookies are necessary for the proper functioning of the website.",
+        "COOKIE_TWO_ITEM": "2. Third-party cookies",
+        "COOKIE_TWO_ITEM_DESCRIPTION": "This website uses Google Analytics, a service provided by Google LLC, which installs cookies to collect anonymous information about website usage (number of visits, pages viewed, approximate location).",
+        "COOKIE_TWO_ITEM_GOOGLE_ANALYTICS": "You can find more information in Google's privacy policy.",
+        "COOKIE_THREE_ITEM": "3. Disabling cookies",
+        "COOKIE_THREE_ITEM_DESCRIPTION": "You can configure your browser to reject cookies or delete existing cookies. Please note that this may affect the website's functionality."
+    },
+    "terms": {
+        "TERMS_TITLE": "Terms and Conditions",
+        "TERMS_DESCRIPTION": "This website has informative and professional character and shows professional projects and services.",
+        "TERMS_ONE_ITEM": "1. Use of the site",
+        "TERMS_ONE_ITEM_DESCRIPTION": "The user commits to use the site in a lawful and respectful manner.",
+        "TERMS_TWO_ITEM": "2. Intellectual property",
+        "TERMS_TWO_ITEM_DESCRIPTION": "All the content of the site, including text, images and code, is the property of JamDev and is protected by intellectual property laws.",
+        "TERMS_THREE_ITEM": "3. Limitation of liability",
+        "TERMS_THREE_ITEM_DESCRIPTION": "JamDev is not liable for damages resulting from the use of the site or the information provided."
+    },
+    "privacy": {
+        "PRIVACY_TITLE": "Privacy Policy",
+        "PRIVACY_ONE_ITEM": "1. Data Controller",
+        "PRIVACY_ONE_ITEM_DESCRIPTION": "The data controller is JamDev, with the following contact email: ",
+        "PRIVACY_TWO_ITEM": "2. Data Collected",
+        "PRIVACY_TWO_ITEM_DESCRIPTION": "The following data is collected through the contact form:",
+        "PRIVACY_TWO_ITEM_NAME": "Name",
+        "PRIVACY_TWO_ITEM_EMAIL": "Email address",
+        "PRIVACY_TWO_ITEM_MESSAGE": "Message sent",
+        "PRIVACY_THREE_ITEM": "3. Purpose of Data Processing",
+        "PRIVACY_THREE_ITEM_DESCRIPTION": "The collected data is used to respond to user inquiries and improve the website experience.",
+        "PRIVACY_FOUR_ITEM": "4. Web Analytics",
+        "PRIVACY_FOUR_ITEM_DESCRIPTION": "This website uses Google Analytics, a web analytics service provided by Google LLC, which allows analysis of website usage and provides statistics on visits, approximate location, and browsing behavior.",
+        "PRIVACY_FOUR_ITEM_ANALYTICS": "Google may use cookies to collect this information.",
+        "PRIVACY_FIVE_ITEM": "5. Data Retention",
+        "PRIVACY_FIVE_ITEM_DESCRIPTION": "Data submitted through the form will be retained only for the time necessary to handle the inquiry.",
+        "PRIVACY_SIX_ITEM": "6. User Rights",
+        "PRIVACY_SIX_ITEM_DESCRIPTION": "The user may request access to, correction, or deletion of their data by sending an email to "
     }
 }

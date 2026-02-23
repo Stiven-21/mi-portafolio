@@ -6,7 +6,8 @@ export const projectsData: Project[] = [
     title: "Nest Auth",
     description:
       "NEST AUTH is an open-source authentication server, modular and extensible, built with NestJS. ",
-    image: "/images/nest-auth.png",
+    image:
+      "https://lh3.googleusercontent.com/d/1UjZBegI7JzOwWTEXfyYDtEa2mWTSHZbb",
     tags: [
       "NestJs",
       "Typescript",

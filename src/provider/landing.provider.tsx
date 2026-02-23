@@ -1,5 +1,6 @@
 "use client";
 import { LandingContext } from "@/context/landing.context";
+import { ModalData } from "@/interfaces/modal-data.interface";
 import { useContext, useState } from "react";
 
 export const useLanding = () => {
@@ -18,6 +19,7 @@ export const LandingProvider = ({
   const [loadingPage, setLoadingPage] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [showNotification, setShowNotification] = useState<boolean>(false);
+  const [modalData, setModalData] = useState<ModalData | null>(null);
 
   return (
     <LandingContext.Provider
@@ -28,6 +30,8 @@ export const LandingProvider = ({
         setShowModal,
         showNotification,
         setShowNotification,
+        modalData,
+        setModalData,
       }}
     >
       {children}

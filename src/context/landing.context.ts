@@ -1,4 +1,5 @@
 "use client";
+import { ModalData } from "@/interfaces/modal-data.interface";
 import { createContext } from "react";
 
 type LandingContextType = {
@@ -8,6 +9,8 @@ type LandingContextType = {
   setShowModal: (showModal: boolean) => void;
   showNotification: boolean;
   setShowNotification: (showNotification: boolean) => void;
+  modalData: ModalData | null;
+  setModalData: (modalData: ModalData | null) => void;
 };
 
 export const LandingContext = createContext<LandingContextType>({
@@ -17,4 +20,6 @@ export const LandingContext = createContext<LandingContextType>({
   setShowModal: () => {},
   showNotification: false,
   setShowNotification: () => {},
+  modalData: null,
+  setModalData: () => {},
 });

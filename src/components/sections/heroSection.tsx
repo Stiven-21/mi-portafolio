@@ -11,6 +11,8 @@ export default function HeroSection() {
   const [language] = useLanguage();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
+  const IMAGE_URL = process.env.NEXT_PUBLIC_IMAGE_PROFILE;
+
   const heroTitle = useMemo(() => {
     const isES = language === "es";
 
@@ -88,19 +90,21 @@ export default function HeroSection() {
                 <div className="absolute inset-0 animate-pulse bg-linear-to-r from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800" />
               )}
 
-              <Image
-                src="/images/perfil.jpg"
-                alt="Personal Image"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 400px"
-                className={`
+              {IMAGE_URL && (
+                <Image
+                  src={IMAGE_URL}
+                  alt="Personal Image"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className={`
                   object-cover rounded-3xl select-none shadow-md
                   transition-all duration-700 ease-out
                   ${isImageLoaded ? "opacity-100 blur-0" : "opacity-0 blur-md"}
                 `}
-                onLoad={handleImageLoad}
-              />
+                  onLoad={handleImageLoad}
+                />
+              )}
             </div>
 
             <div className="absolute -bottom-12 left-1 w-40 h-40 border-l border-b hidden md:block border-blue-500/30 rounded-bl-3xl pointer-events-none" />

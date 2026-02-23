@@ -85,8 +85,8 @@ const SelectLanguage = () => {
             >
               <Flag
                 code={lang.code}
-                height={20}
-                width={20}
+                height={17}
+                width={17}
               />
               {t_language(lang["text-dropdown"])}
             </button>
