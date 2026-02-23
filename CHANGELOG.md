@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/Stiven-21/mi-portafolio/compare/v2.0.0...v2.0.1) (2026-02-23)
+
+
+### 🐛 Bug Fixes
+
+* corrección de importaciones rotas y actualizacion de dominio de imagenes ([5aa555a](https://github.com/Stiven-21/mi-portafolio/commit/5aa555a9125c20f075b64286b9c68087b8e60614))
+
 ## 2.0.0 (2026-02-23)
 
 
