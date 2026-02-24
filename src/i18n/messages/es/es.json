@@ -102,7 +102,10 @@
         "CONTACT_FORM_MESSAGE_REQUIRED": "Escribe tu mensaje para continuar.",
 
         "CONTACT_FORM_SEND": "Enviar",
-        "CONTACT_FORM_SENDING": "Enviando..."
+        "CONTACT_FORM_SENDING": "Enviando...",
+
+        "CONTACT_FORM_SUCCESS": "Gracias por tu mensaje. Te responderemos lo antes posible.",
+        "CONTACT_FORM_ERROR": "Ocurrió un error al enviar tu mensaje. Por favor, inténtalo de nuevo."
     },
     "cookie": {
         "COOKIE_BANNER_DESCRIPTION": "Utilizamos cookies para mejorar tu experiencia y analizar el tráfico mediante Google Analytics. Puedes aceptar o rechazar las cookies analíticas.",
